@@ -1,0 +1,4166 @@
+{
+  "settings": {
+    "command": "train",
+    "model": "artifacts/gpt2",
+    "data": "data/xnli",
+    "text": "pretrain.txt",
+    "languages": [
+      "en"
+    ],
+    "output": "results/showcase",
+    "checkpoint": "checkpoints/showcase.pt",
+    "device": "cuda",
+    "epochs": 1,
+    "batch_size": 4,
+    "max_length": 128,
+    "lr": 5e-05,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "threads": 4,
+    "train_limit": 1024,
+    "dev_limit": 128,
+    "test_limit": 256,
+    "train_fraction": 1.0,
+    "eval_fraction": 1.0,
+    "accumulation_steps": 1,
+    "mixed_precision": true,
+    "tiny": false,
+    "initialization": "pretrained",
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "label_order": [
+      "entailment",
+      "contradiction",
+      "neutral"
+    ],
+    "train_count": 1024,
+    "train_ids_sha256": "085d8c2c85ca85d4b035bc29a175202edab71288573cf15b88af2dfa58300806",
+    "dev_count": 128,
+    "dev_ids_sha256": "98c39632f190a90ee4af55ac8fef02d202ff4fd54fe4344393ca66a277816585",
+    "test_count": 256,
+    "test_ids_sha256": "42e33c5d2a0098d2160a88d83eef2fedd3b7edbac55fa328dc648e3fecbb4b69"
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "dev_accuracy": 0.4609375,
+      "mean_loss": 1.2432660711929202
+    }
+  ],
+  "losses": [
+    10.52444839477539,
+    4.852171897888184,
+    3.941030979156494,
+    2.8147313594818115,
+    1.9968385696411133,
+    2.328555107116699,
+    1.4965416193008423,
+    1.3849942684173584,
+    1.77096688747406,
+    1.320845127105713,
+    1.4671297073364258,
+    0.9769556522369385,
+    1.4603984355926514,
+    2.3696494102478027,
+    1.4395002126693726,
+    1.1486260890960693,
+    1.1658923625946045,
+    1.3489785194396973,
+    1.2919301986694336,
+    1.2689794301986694,
+    1.2198677062988281,
+    1.3402986526489258,
+    1.1233623027801514,
+    1.263463020324707,
+    1.2114890813827515,
+    0.9847678542137146,
+    1.153281331062317,
+    0.9416177272796631,
+    1.2245216369628906,
+    1.2847843170166016,
+    1.4675893783569336,
+    1.515122652053833,
+    1.3845899105072021,
+    0.8363357186317444,
+    0.972822904586792,
+    1.1512765884399414,
+    1.0644527673721313,
+    1.1146043539047241,
+    1.1663868427276611,
+    1.1936440467834473,
+    0.986278235912323,
+    0.9899618625640869,
+    1.219483494758606,
+    1.214298129081726,
+    0.9850475788116455,
+    1.3025240898132324,
+    0.9609726667404175,
+    0.9788640737533569,
+    1.1278578042984009,
+    1.1615620851516724,
+    1.0133635997772217,
+    1.0970343351364136,
+    1.076311469078064,
+    1.1397731304168701,
+    1.0752301216125488,
+    0.9975570440292358,
+    1.1180124282836914,
+    1.1829949617385864,
+    1.2320284843444824,
+    1.2980637550354004,
+    0.9658845067024231,
+    1.2968125343322754,
+    0.883142352104187,
+    1.193785548210144,
+    1.0619709491729736,
+    1.4001562595367432,
+    1.0517233610153198,
+    1.0964574813842773,
+    1.3145151138305664,
+    1.0275886058807373,
+    1.1505169868469238,
+    0.8952697515487671,
+    1.062873363494873,
+    1.1748244762420654,
+    0.9251678586006165,
+    0.9165893793106079,
+    0.9323691129684448,
+    0.9395652413368225,
+    1.291583776473999,
+    0.973091721534729,
+    1.4856503009796143,
+    1.5101532936096191,
+    1.1305248737335205,
+    0.9923205375671387,
+    1.579322099685669,
+    1.2130937576293945,
+    1.0954302549362183,
+    1.1789865493774414,
+    1.0691554546356201,
+    1.2561861276626587,
+    1.1458624601364136,
+    0.9049167633056641,
+    1.2125356197357178,
+    0.9349410533905029,
+    1.165685772895813,
+    0.8101748824119568,
+    1.337633728981018,
+    0.7976366281509399,
+    1.200925588607788,
+    1.0983054637908936,
+    1.2702316045761108,
+    0.7819368839263916,
+    1.1985023021697998,
+    1.2527934312820435,
+    1.0901490449905396,
+    1.3373185396194458,
+    1.3761783838272095,
+    1.0627014636993408,
+    1.038317322731018,
+    1.4642746448516846,
+    0.9595781564712524,
+    1.4204727411270142,
+    1.3087364435195923,
+    1.171053409576416,
+    1.0551666021347046,
+    1.202073097229004,
+    1.2105046510696411,
+    1.0131020545959473,
+    1.331694483757019,
+    1.3274457454681396,
+    1.1234056949615479,
+    1.1561157703399658,
+    1.3363170623779297,
+    1.0111563205718994,
+    1.137540340423584,
+    1.1233716011047363,
+    1.0746190547943115,
+    1.0081562995910645,
+    1.091213583946228,
+    1.0099105834960938,
+    1.442922592163086,
+    1.1712632179260254,
+    1.0769037008285522,
+    1.0571436882019043,
+    1.2603753805160522,
+    1.5140681266784668,
+    1.000611424446106,
+    1.3489259481430054,
+    0.8594048023223877,
+    1.3507895469665527,
+    1.4551352262496948,
+    1.412003517150879,
+    1.3406598567962646,
+    1.0464637279510498,
+    1.2153681516647339,
+    1.0472824573516846,
+    1.2103490829467773,
+    1.2621455192565918,
+    1.0971922874450684,
+    1.01949143409729,
+    1.2854708433151245,
+    0.8042933344841003,
+    1.0726702213287354,
+    1.1274802684783936,
+    1.0862276554107666,
+    1.0844764709472656,
+    1.2460931539535522,
+    1.0812795162200928,
+    1.216106653213501,
+    1.0158731937408447,
+    0.9998478889465332,
+    0.7584534287452698,
+    1.1577184200286865,
+    1.569607138633728,
+    1.3718329668045044,
+    0.8536127209663391,
+    1.0497549772262573,
+    1.1475193500518799,
+    1.098012924194336,
+    1.4695241451263428,
+    0.9992374777793884,
+    0.9539498090744019,
+    1.0861577987670898,
+    1.2418663501739502,
+    0.834667444229126,
+    1.154296875,
+    1.166886329650879,
+    1.189611554145813,
+    0.8288643956184387,
+    1.24330472946167,
+    1.2683587074279785,
+    1.0638716220855713,
+    1.323917031288147,
+    1.1857020854949951,
+    1.0319207906723022,
+    1.2387171983718872,
+    1.141325831413269,
+    1.0735634565353394,
+    1.110528588294983,
+    1.6468770503997803,
+    1.1572924852371216,
+    0.8920682668685913,
+    1.3695403337478638,
+    1.166933536529541,
+    0.9990796446800232,
+    1.1874885559082031,
+    1.1215611696243286,
+    0.9177015423774719,
+    1.1532901525497437,
+    1.1679881811141968,
+    1.3394348621368408,
+    1.2642848491668701,
+    1.1185022592544556,
+    0.8771215677261353,
+    1.2941148281097412,
+    1.1179760694503784,
+    1.203061580657959,
+    1.0432161092758179,
+    1.1587430238723755,
+    1.0839720964431763,
+    1.0484896898269653,
+    1.2705888748168945,
+    1.0074362754821777,
+    1.0337846279144287,
+    1.138000726699829,
+    1.1946876049041748,
+    1.0824733972549438,
+    0.9936074018478394,
+    1.394415259361267,
+    1.132650375366211,
+    0.8404545783996582,
+    0.8544735312461853,
+    1.2830970287322998,
+    1.1869094371795654,
+    1.210615634918213,
+    1.0417271852493286,
+    1.2013890743255615,
+    1.0910823345184326,
+    1.0903806686401367,
+    1.0607290267944336,
+    0.9632623791694641,
+    0.9260962009429932,
+    0.9250655174255371,
+    1.1624040603637695,
+    1.5642740726470947,
+    1.484727144241333,
+    1.5511667728424072,
+    1.09248685836792,
+    1.3841769695281982,
+    1.3135675191879272,
+    1.1588605642318726,
+    1.2019914388656616,
+    0.992461621761322,
+    1.1771291494369507,
+    0.9320211410522461,
+    1.406916618347168,
+    0.8876516222953796,
+    1.1561686992645264,
+    1.9161405563354492,
+    1.1793407201766968,
+    1.3674142360687256,
+    1.0873470306396484,
+    1.3177461624145508,
+    1.648085355758667,
+    1.4998183250427246,
+    0.9634202718734741
+  ],
+  "selected_epoch": 1,
+  "elapsed_seconds": 147.9145716999774,
+  "checkpoint": "checkpoints/showcase.pt",
+  "status": "reproduced_small_run",
+  "baseline": {
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "count": 256
+  },
+  "test": {
+    "accuracy": 0.328125,
+    "coverage": 1.0,
+    "count": 256,
+    "predictions": [
+      {
+        "id": "en/test/912",
+        "premise": "spend it on the ones who who do have a chance",
+        "hypothesis": "Give it to everyone, regardless of what they will do with it.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.24146921932697296,
+          0.49383610486984253,
+          0.2646946609020233
+        ]
+      },
+      {
+        "id": "en/test/204",
+        "premise": "They just didn't like what it was like being black in those days, and that was, you know, I guess, that, that was probably, you know, in the early 1930s, uh, when they did that.",
+        "hypothesis": "It was hard to be black in the south.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2777233421802521,
+          0.4375939965248108,
+          0.2846826910972595
+        ]
+      },
+      {
+        "id": "en/test/2253",
+        "premise": "Close to the original action and still providing the most vivid testimony to the Klondike days, the boomtown of Dawson City yielded in 1951 to the transportation and communications center of Whitehorse as territorial capital.",
+        "hypothesis": "Whitehorse used mainly horse carriages for transportation.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2919815182685852,
+          0.4252943694591522,
+          0.2827241122722626
+        ]
+      },
+      {
+        "id": "en/test/2006",
+        "premise": "The museum is not strong on catalogues or labels",
+        "hypothesis": "The strong point of the museum is the catalogues.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3344479203224182,
+          0.42740657925605774,
+          0.23814544081687927
+        ]
+      },
+      {
+        "id": "en/test/1828",
+        "premise": "Levasseur?  He smiled a little.",
+        "hypothesis": "He kept his mouth closed as he smiled a bit.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27215200662612915,
+          0.47485479712486267,
+          0.25299325585365295
+        ]
+      },
+      {
+        "id": "en/test/1143",
+        "premise": "As the Secret Constitution would again reassert itself in American politics, we would also take the promise of the Fifteenth Amendment seriously.",
+        "hypothesis": "The Fifteenth Amendment was immediately written off and never passed.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2638246715068817,
+          0.46639493107795715,
+          0.2697804272174835
+        ]
+      },
+      {
+        "id": "en/test/839",
+        "premise": "you know it's probably about twenty by i don't know twenty by six something like that and it's amazing what you can you know how many plants you can plant in there",
+        "hypothesis": "The number of plants it can hold depends upon the types of plants you put in.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3150213658809662,
+          0.4265223443508148,
+          0.2584562301635742
+        ]
+      },
+      {
+        "id": "en/test/4467",
+        "premise": "The basic flow of world history, as I'm not the first to note, is toward interdependence.",
+        "hypothesis": "As I am the last to note, the flow of world history is towards a more solitary existence.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3111845552921295,
+          0.4297357499599457,
+          0.2590796947479248
+        ]
+      },
+      {
+        "id": "en/test/712",
+        "premise": "well i don't remember it seemed like it did but it might not i guess i guess",
+        "hypothesis": "I do not recall completely since I drank quite a bit of wine last night.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.23762813210487366,
+          0.48101553320884705,
+          0.2813563048839569
+        ]
+      },
+      {
+        "id": "en/test/4837",
+        "premise": "In other words, what happens is something like the legerdemain of a magician's now-you-see-it-now-you-don't.",
+        "hypothesis": "What happens is a huge surprise for the audience.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2934986352920532,
+          0.44906771183013916,
+          0.25743362307548523
+        ]
+      },
+      {
+        "id": "en/test/3456",
+        "premise": "Many PAPD officers were on the ground floors of the complex-some assisting in evacuation, others manning the PAPD desk in 5 WTC or assisting at lobby command posts.",
+        "hypothesis": "The PAPD was nowhere to be found at 5 WTC.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2783733904361725,
+          0.4475354850292206,
+          0.27409109473228455
+        ]
+      },
+      {
+        "id": "en/test/260",
+        "premise": "It's a little screw which set an injection but the, the breathing pressure tube to the pilot and counter pressure.",
+        "hypothesis": "There are no screws, just buttons.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2855323255062103,
+          0.4730530381202698,
+          0.24141469597816467
+        ]
+      },
+      {
+        "id": "en/test/244",
+        "premise": "The DOT had to buy the property and stuff.",
+        "hypothesis": "The property and equipment was purchased by the DOT.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3161906898021698,
+          0.4262121021747589,
+          0.2575972080230713
+        ]
+      },
+      {
+        "id": "en/test/767",
+        "premise": "themselves and i like some of their songs but as as i agree as a general rule i i wouldn't choose rap either",
+        "hypothesis": "They had a few number one hits.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2558349370956421,
+          0.47286292910575867,
+          0.27130213379859924
+        ]
+      },
+      {
+        "id": "en/test/1791",
+        "premise": "As for me,  said Lord Julian, with intent to make Miss Bishop's departure free from all interference on the part of the buccaneers,  I shall remain aboard the Arabella until we reach Port Royal.",
+        "hypothesis": "Lord Julian got off the Arabella as soon as he possibly could, leaving Miss Bishop alone.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.26556292176246643,
+          0.4437817633152008,
+          0.29065531492233276
+        ]
+      },
+      {
+        "id": "en/test/1905",
+        "premise": "Oh, please.  There was real alarm in her voice.",
+        "hypothesis": "Her voice demonstrated a calm and relaxed demeanor.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27649566531181335,
+          0.47213980555534363,
+          0.25136446952819824
+        ]
+      },
+      {
+        "id": "en/test/4139",
+        "premise": "Samuel Sheinbein will serve a murder sentence in Israel.",
+        "hypothesis": "Samuel Sheinbein will serve life in prison for the murder he committed.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.265703946352005,
+          0.4661257565021515,
+          0.26817023754119873
+        ]
+      },
+      {
+        "id": "en/test/4931",
+        "premise": "As Welsh's book has a list under PRONUNCIATION, I looked there, to no avail.",
+        "hypothesis": "The pronunciation list only included the most basic things.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31527379155158997,
+          0.4343709349632263,
+          0.2503553032875061
+        ]
+      },
+      {
+        "id": "en/test/217",
+        "premise": "We were watching something on TV.",
+        "hypothesis": "We were looking at the TV.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2851097583770752,
+          0.4662340581417084,
+          0.2486562579870224
+        ]
+      },
+      {
+        "id": "en/test/4597",
+        "premise": "The association of money names with other weights is  ouguiya (Mauritania) means `ounce.",
+        "hypothesis": "Ouguiya is translated a 'kilogram' and is used only as a unit of weight measurement.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3464347720146179,
+          0.4037613868713379,
+          0.2498037964105606
+        ]
+      },
+      {
+        "id": "en/test/1628",
+        "premise": "She realized that perhaps she had, herself, provoked his anger.",
+        "hypothesis": "She thought she may have provoked his anger.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27714237570762634,
+          0.4720253050327301,
+          0.25083234906196594
+        ]
+      },
+      {
+        "id": "en/test/4464",
+        "premise": "That sits in shadow of Apollo's tree.",
+        "hypothesis": "It sits in broad daylight under the sun.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2767637372016907,
+          0.4624641239643097,
+          0.2607721984386444
+        ]
+      },
+      {
+        "id": "en/test/3436",
+        "premise": "They concluded that none of the passengers was connected to the 9/11 attacks and have since found no evidence to change that conclusion.",
+        "hypothesis": "They are certain that several of the passengers were involved in the attacks.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3119801878929138,
+          0.4404461979866028,
+          0.2475735992193222
+        ]
+      },
+      {
+        "id": "en/test/1805",
+        "premise": "But many could not resolve one way or the other until they were satisfied upon several questions, and chiefly upon one which was voiced by Ogle.",
+        "hypothesis": "Ogle mentioned that the people asking the questions did not know what they were talking about.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28448358178138733,
+          0.4511586129665375,
+          0.2643578350543976
+        ]
+      },
+      {
+        "id": "en/test/3679",
+        "premise": "In November, we sent letters sharing with you a story about the Boys &amp; Girls Club, a wonderful, positive place for children and youth in our community.",
+        "hypothesis": "We send letters out in November.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2937573194503784,
+          0.4379643499851227,
+          0.2682783901691437
+        ]
+      },
+      {
+        "id": "en/test/4827",
+        "premise": "For example, a program chairman prepared in longhand a few laudatory introductory remarks about a   ..",
+        "hypothesis": "A program chairman prepared some introductory remarks.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3898335099220276,
+          0.40860745310783386,
+          0.20155902206897736
+        ]
+      },
+      {
+        "id": "en/test/2278",
+        "premise": "Behind the hotel, beyond an 1898 statue of Samuel de Champlain, the city's founder, Dufferin Terrace offers a magnificent view over the St. Lawrence and downriver to the Ile d'Orleans.",
+        "hypothesis": "The statue of the city founder was built in 1898.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29296717047691345,
+          0.41688618063926697,
+          0.2901466488838196
+        ]
+      },
+      {
+        "id": "en/test/53",
+        "premise": "Even if the aircraft was on fire, why it, it would uh, burn and it would melt through a lead component for the radiation to leak out.",
+        "hypothesis": "The radiation would not leak out during a fire.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.28381672501564026,
+          0.46609970927238464,
+          0.2500835955142975
+        ]
+      },
+      {
+        "id": "en/test/1307",
+        "premise": "That is why it is disconcerting if dress and decor are not in harmony.",
+        "hypothesis": "There is a sense of beauty and order when dress and decor are in harmony.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2992837727069855,
+          0.45415809750556946,
+          0.24655815958976746
+        ]
+      },
+      {
+        "id": "en/test/3462",
+        "premise": "Some FBI investigators doubt Rababah's story.",
+        "hypothesis": "Rababah insisted that he was visiting relatives at the time of the attack.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.268196702003479,
+          0.46109241247177124,
+          0.27071091532707214
+        ]
+      },
+      {
+        "id": "en/test/2787",
+        "premise": "The employer and employee contributions are generally calculated in the same way",
+        "hypothesis": "Both contributions are figured out by the same method.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.33024048805236816,
+          0.4278718829154968,
+          0.24188759922981262
+        ]
+      },
+      {
+        "id": "en/test/2276",
+        "premise": "The Beaux Arts City Hall has been replaced by nearby Government Center.",
+        "hypothesis": "The government center was replaced by city hall.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.32625991106033325,
+          0.42408737540245056,
+          0.24965263903141022
+        ]
+      },
+      {
+        "id": "en/test/1273",
+        "premise": "The sense of common destiny is nowhere better expressed than in the Jewish  Kol Jehudim eruvim ze bze [All Jews are responsible for each other].",
+        "hypothesis": "Jews love each other.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2810812294483185,
+          0.4542219936847687,
+          0.2646968364715576
+        ]
+      },
+      {
+        "id": "en/test/1763",
+        "premise": "Through her and through you.",
+        "hypothesis": "Through the both of them.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2937045097351074,
+          0.4673624336719513,
+          0.23893311619758606
+        ]
+      },
+      {
+        "id": "en/test/2757",
+        "premise": "The following figure illustrates traditional centralized and decentralized organizational structures, in comparison with the hybrid combination used by leading organizations today.",
+        "hypothesis": "Centralized organizational structures are the best.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3240440785884857,
+          0.4337131679058075,
+          0.2422427237033844
+        ]
+      },
+      {
+        "id": "en/test/837",
+        "premise": "you know it's probably about twenty by i don't know twenty by six something like that and it's amazing what you can you know how many plants you can plant in there",
+        "hypothesis": "It holds a lot more plants than you would think.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28630486130714417,
+          0.4500875771045685,
+          0.26360753178596497
+        ]
+      },
+      {
+        "id": "en/test/759",
+        "premise": "and you're the minority and you're stuck with it but uh",
+        "hypothesis": "Minorities may have the upper advantage in this case.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.25804516673088074,
+          0.47185570001602173,
+          0.27009910345077515
+        ]
+      },
+      {
+        "id": "en/test/3112",
+        "premise": "We're just trying to figure out what's going on.",
+        "hypothesis": "We're also trying to learn what happened yesterday.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27603060007095337,
+          0.4815560281276703,
+          0.24241331219673157
+        ]
+      },
+      {
+        "id": "en/test/792",
+        "premise": "well i don't think he i don't think he wants to do that but he he certainly would be like an elder statesman or whatever",
+        "hypothesis": "I don't believe he wants to be in that position.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28368163108825684,
+          0.46178707480430603,
+          0.25453123450279236
+        ]
+      },
+      {
+        "id": "en/test/2940",
+        "premise": "The crosshatched trapezoid is the welfare loss to these mailers as a market, given that they cannot shift.",
+        "hypothesis": "The crosshatched pentagon has helped the mailer market boost profits.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.30810263752937317,
+          0.4266141951084137,
+          0.26528313755989075
+        ]
+      },
+      {
+        "id": "en/test/2817",
+        "premise": "Incremental purchasing may limit risks by identifying problems earlier, which allows for easier change or correction.",
+        "hypothesis": "Incremental purchasing can be put into action right away.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3098984360694885,
+          0.4584336578845978,
+          0.23166796565055847
+        ]
+      },
+      {
+        "id": "en/test/4945",
+        "premise": ". running up and down.",
+        "hypothesis": "Sprinting up and down.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2635740637779236,
+          0.49581021070480347,
+          0.24061574041843414
+        ]
+      },
+      {
+        "id": "en/test/2166",
+        "premise": "These link the main public beaches (from Warwick Long Bay to Horseshoe Bay).",
+        "hypothesis": "All of the beaches are private.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.296129435300827,
+          0.462692528963089,
+          0.24117803573608398
+        ]
+      },
+      {
+        "id": "en/test/355",
+        "premise": "You know, you can't, you cannot survive if you don't have any counter pressure, increase breathing pressure in those altitudes.",
+        "hypothesis": "You need counter pressure above 5000 feet.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26310020685195923,
+          0.4612025320529938,
+          0.2756972312927246
+        ]
+      },
+      {
+        "id": "en/test/3763",
+        "premise": "One of the devastating consequences of heart disease is the irreparable damage it does to the heart muscle.",
+        "hypothesis": "The damage done to the heart muscle by heart disease is easily repaired.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.305141806602478,
+          0.4438093900680542,
+          0.2510487735271454
+        ]
+      },
+      {
+        "id": "en/test/4392",
+        "premise": "Or, consider the issue of informing Congress about covert actions.",
+        "hypothesis": "Congress can stop covert actions.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3048323392868042,
+          0.4577367901802063,
+          0.2374308556318283
+        ]
+      },
+      {
+        "id": "en/test/1022",
+        "premise": "Consequently, adults do not need to  tutor  preschoolers in pretending, as they sometimes do when helping them master puzzles or other similar tasks.",
+        "hypothesis": "Preschoolers lack the necessary spatial modeling skills to master puzzles on their own.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3002689480781555,
+          0.43890661001205444,
+          0.26082444190979004
+        ]
+      },
+      {
+        "id": "en/test/3100",
+        "premise": "For the other units, see FDNY records, computer-aided dispatch report, alarm box 1377, Sept. 11,2001,09:42:45-09:47:05.",
+        "hypothesis": "There is a record kept of computer-aided dispatches.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3596026301383972,
+          0.4141622483730316,
+          0.22623513638973236
+        ]
+      },
+      {
+        "id": "en/test/645",
+        "premise": "Locust Hill uh-huh right oh great",
+        "hypothesis": "Locust Hill is the best.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2846607565879822,
+          0.4670366644859314,
+          0.2483026087284088
+        ]
+      },
+      {
+        "id": "en/test/4522",
+        "premise": "It is gratuitously assumed that Yiddish ...",
+        "hypothesis": "It is rudely never considered that Yiddish...",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.28398674726486206,
+          0.4784853458404541,
+          0.23752795159816742
+        ]
+      },
+      {
+        "id": "en/test/2401",
+        "premise": "Tourist offices have tried to rename the area L'Estrie, but even the most militant Quebecois prefer the customary direct, if approximate, translation of the  Cantons de l'Est.",
+        "hypothesis": "The tourism people want to give the area a new name.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31337717175483704,
+          0.4195609986782074,
+          0.2670617997646332
+        ]
+      },
+      {
+        "id": "en/test/2962",
+        "premise": "Would we not answer a phone call, not respond to a question, cancel a deposition, or not go to the library and research a case?",
+        "hypothesis": "Refusing to answer the phone would not be in our best interest.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27328044176101685,
+          0.4860687255859375,
+          0.24065084755420685
+        ]
+      },
+      {
+        "id": "en/test/4729",
+        "premise": "In 1972, Phillip Morris, Inc.'s Miller Brewing Co. acquired the Lite beer label in a buyout of Meister Brau Inc.",
+        "hypothesis": "Phillip Morris, Inc.'s Miller Brewing Co. bought out Meister Brau Inc. in 1972, and therefore owned the Lite beer label.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3376818299293518,
+          0.39909642934799194,
+          0.26322174072265625
+        ]
+      },
+      {
+        "id": "en/test/1575",
+        "premise": "A frown rumpled her brow.",
+        "hypothesis": "A huge grin was spread on her face.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2819788157939911,
+          0.45735472440719604,
+          0.26066645979881287
+        ]
+      },
+      {
+        "id": "en/test/569",
+        "premise": "yes oh what sort of puppy do you have",
+        "hypothesis": "What kind of young dog do you have?",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.271986722946167,
+          0.4802740216255188,
+          0.24773932993412018
+        ]
+      },
+      {
+        "id": "en/test/375",
+        "premise": "It was really cool, and the dress kind of blew in the wind a little bit--",
+        "hypothesis": "The dress was billowing in the wind.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.297116219997406,
+          0.43463969230651855,
+          0.26824405789375305
+        ]
+      },
+      {
+        "id": "en/test/1866",
+        "premise": "Heave her to, and signal to them to send a boat.   A silence of astonishment fell upon the ship--of astonishment and suspicion at this sudden yielding.",
+        "hypothesis": "No one on board the ship was shocked in any way.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2553977370262146,
+          0.48274073004722595,
+          0.26186156272888184
+        ]
+      },
+      {
+        "id": "en/test/2370",
+        "premise": "The buses stop either at the station on Isidoro Macabich, or in the case of the small blue buses opposite the Delegacien del Gobierno building on the same avenue.",
+        "hypothesis": "The buses alternate which stop they end at.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3181826174259186,
+          0.42416882514953613,
+          0.2576485574245453
+        ]
+      },
+      {
+        "id": "en/test/653",
+        "premise": "the the extra nickel or what is it extra thirty cents for a for a for six bottles everybody everybody comes across the border  to buy the cheaper the the cheaper drinks",
+        "hypothesis": "The bottles are more expensive on the other side of the border.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2910544276237488,
+          0.42394718527793884,
+          0.28499841690063477
+        ]
+      },
+      {
+        "id": "en/test/1907",
+        "premise": "Oh, please.  There was real alarm in her voice.",
+        "hypothesis": "She was worried because there might have been a fire.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2697124779224396,
+          0.4722851514816284,
+          0.2580023407936096
+        ]
+      },
+      {
+        "id": "en/test/827",
+        "premise": "uh it's amazing it's amazing what you can get out of a little",
+        "hypothesis": "There is no way that so little would be enough.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2662738859653473,
+          0.4771171510219574,
+          0.2566089332103729
+        ]
+      },
+      {
+        "id": "en/test/3113",
+        "premise": "We're just trying to figure out what's going on.",
+        "hypothesis": "We're trying to learn what is happening.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2851822078227997,
+          0.48306888341903687,
+          0.23174892365932465
+        ]
+      },
+      {
+        "id": "en/test/2277",
+        "premise": "Behind the hotel, beyond an 1898 statue of Samuel de Champlain, the city's founder, Dufferin Terrace offers a magnificent view over the St. Lawrence and downriver to the Ile d'Orleans.",
+        "hypothesis": "The statue is made entirely of marble.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2881019413471222,
+          0.4327431321144104,
+          0.2791549563407898
+        ]
+      },
+      {
+        "id": "en/test/3714",
+        "premise": "You already understand the importance of storytelling, poetry, song, and theatre in fostering empathy, compassion, and the imagination.",
+        "hypothesis": "Art is important in promoting empathy, compassion, and using one's imagination.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29770371317863464,
+          0.4344206154346466,
+          0.2678757607936859
+        ]
+      },
+      {
+        "id": "en/test/2988",
+        "premise": "23Financial  Continued Momentum Essential to Achieve CFO Act Goals",
+        "hypothesis": "23Financial continues to achieve CFO Act Goals thanks to positive momentum.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.33445146679878235,
+          0.427407830953598,
+          0.23814070224761963
+        ]
+      },
+      {
+        "id": "en/test/1332",
+        "premise": "She went on to write Mexican Village, a novel that incorporated many of the Mexican people's folk customs and traditions.",
+        "hypothesis": "She didn't know much about Mexicans.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2650006115436554,
+          0.47639602422714233,
+          0.2586033046245575
+        ]
+      },
+      {
+        "id": "en/test/3032",
+        "premise": "Mihdhar received a new U.S. visa two days after the CIA-FBI meeting in New York.",
+        "hypothesis": "Mihdhar was given a Visa because he was not a threat.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2797258496284485,
+          0.45316430926322937,
+          0.26710981130599976
+        ]
+      },
+      {
+        "id": "en/test/2910",
+        "premise": "Although the C-R relationship may, in fact, vary from one location to another (for example, due to differences in population susceptibilities or differences in the composition of PM), locationspecific C-R functions are generally not available.",
+        "hypothesis": "C-R relationships vary from location to location.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3635561764240265,
+          0.4177870750427246,
+          0.2186567783355713
+        ]
+      },
+      {
+        "id": "en/test/1716",
+        "premise": "I will take leave to doubt it.  His lordship's tone abated nothing of its asperity.",
+        "hypothesis": "His lordship spoke sharply.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2838560938835144,
+          0.4639042913913727,
+          0.2522396445274353
+        ]
+      },
+      {
+        "id": "en/test/2187",
+        "premise": "The sea is reached only by narrow lanes and farm tracks, but it's worth a trek to get away from the crowds.",
+        "hypothesis": "Only huge highways go to the ocean.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.26284974813461304,
+          0.4570940434932709,
+          0.2800562381744385
+        ]
+      },
+      {
+        "id": "en/test/584",
+        "premise": "and it would also cause people to compact their garbage more uh and uh and limiting the volume is probably a little bit closer to the real problem than limiting the weight",
+        "hypothesis": "People need to consider both the volume and the weight of the garbage they are producing.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2839965522289276,
+          0.45055127143859863,
+          0.265452116727829
+        ]
+      },
+      {
+        "id": "en/test/4990",
+        "premise": "And rest easy, Miss Dalrymple, when I reedit speech scripts for print publication, I always revert to good old academically pure English usage.",
+        "hypothesis": "I reedit speeches for my job.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.30739253759384155,
+          0.43439018726348877,
+          0.25821730494499207
+        ]
+      },
+      {
+        "id": "en/test/1401",
+        "premise": "The symptoms of mal ojo are vomiting, diarrhea, loss of weight, and sometimes even death.",
+        "hypothesis": "If you have mal ojo you will vomit a lot.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.24956338107585907,
+          0.49291980266571045,
+          0.2575168311595917
+        ]
+      },
+      {
+        "id": "en/test/4375",
+        "premise": "You know who would understand?",
+        "hypothesis": "I think you know who would understand.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27078911662101746,
+          0.484068900346756,
+          0.24514202773571014
+        ]
+      },
+      {
+        "id": "en/test/2005",
+        "premise": "The museum is not strong on catalogues or labels",
+        "hypothesis": "The museum is not a fan of brochures.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2883419096469879,
+          0.4703015983104706,
+          0.24135653674602509
+        ]
+      },
+      {
+        "id": "en/test/1338",
+        "premise": "The paradox of the American approach toward equality is that though we trail European societies in our concern about economic equality and wealth discrimination, we lead the world in other areas of egalitarian thinking.",
+        "hypothesis": "America leads European societies in the concern about economic equality.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3287274241447449,
+          0.41781702637672424,
+          0.25345557928085327
+        ]
+      },
+      {
+        "id": "en/test/3786",
+        "premise": "Unfortunately, our view of the importance of philanthropy is not shared by all Americans.",
+        "hypothesis": "Every American gives 20% of their income to nonprofits.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2498948872089386,
+          0.48369938135147095,
+          0.26640573143959045
+        ]
+      },
+      {
+        "id": "en/test/3108",
+        "premise": "At the same time, Saudi Arabia's society was a place where al Qaeda raised money directly from individuals and through charities.",
+        "hypothesis": "Al Qaeda also received money from businesses.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29543766379356384,
+          0.43544426560401917,
+          0.2691181004047394
+        ]
+      },
+      {
+        "id": "en/test/2211",
+        "premise": "The ruthless defense minister Gustav Noske called in 4,000 Freikorps (right-wing storm-troopers) to smash the movement.",
+        "hypothesis": "Noske wanted the movement to stop before he lost power.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2813502252101898,
+          0.447020947933197,
+          0.27162882685661316
+        ]
+      },
+      {
+        "id": "en/test/4562",
+        "premise": "One thing M. Tesniares hasn't reckoned with, though, is the Anglo-Saxon input.",
+        "hypothesis": "M. Tesniares performs Anglo-Saxon input.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.33093249797821045,
+          0.4554372727870941,
+          0.21363022923469543
+        ]
+      },
+      {
+        "id": "en/test/1799",
+        "premise": "Expressly.   His lordship waited a moment for a reply.",
+        "hypothesis": "The lordship replied immediately and only figuratively.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2868700921535492,
+          0.4545963704586029,
+          0.2585335373878479
+        ]
+      },
+      {
+        "id": "en/test/2656",
+        "premise": "To be a Value Creating, Customer Focused Partner in Business Results",
+        "hypothesis": "Partners can be customer-focused in their business.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31695955991744995,
+          0.4628230333328247,
+          0.22021745145320892
+        ]
+      },
+      {
+        "id": "en/test/458",
+        "premise": "My, my mother wound up not being one of his favorites early on and, ah, so she was relegated to working in the fields whereas some of the other kids didn't work in the fields.",
+        "hypothesis": "My mother had to work outside.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2642582952976227,
+          0.45477911829948425,
+          0.28096258640289307
+        ]
+      },
+      {
+        "id": "en/test/1876",
+        "premise": "And the quixotic fool is running into danger at the present moment on our behalf.",
+        "hypothesis": "He ran away to avoid getting into danger.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.25736498832702637,
+          0.4914504587650299,
+          0.2511845827102661
+        ]
+      },
+      {
+        "id": "en/test/262",
+        "premise": "She's like, Don't worry about it, you know, just take your time.",
+        "hypothesis": "She told me it was fine if it took me hours to do it.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.24937306344509125,
+          0.4698810577392578,
+          0.28074583411216736
+        ]
+      },
+      {
+        "id": "en/test/2584",
+        "premise": "The CIO and decision-making authorities decide what type of work is appropriate to outsource and what type of work is best performed internally.",
+        "hypothesis": "The CIO said which work was ok.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.33043983578681946,
+          0.4346632659435272,
+          0.23489685356616974
+        ]
+      },
+      {
+        "id": "en/test/3286",
+        "premise": "Hezbollah officials in Beirut and Iran were expecting the arrival of a group during the same time period.",
+        "hypothesis": "The group was able to arrive in the middle of the night, because no one expected their arrival.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2670356333255768,
+          0.44211187958717346,
+          0.290852427482605
+        ]
+      },
+      {
+        "id": "en/test/2193",
+        "premise": "Even so, Paris recently created miles of cycling lanes that crisscross the entire city, making bicycling much safer (and more popular).",
+        "hypothesis": "It's much safer to cycle in Paris now compared to 10 years ago.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2564395070075989,
+          0.4598463773727417,
+          0.2837141156196594
+        ]
+      },
+      {
+        "id": "en/test/542",
+        "premise": "that was their goal oh",
+        "hypothesis": "They achieved their goal.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2724142074584961,
+          0.48859649896621704,
+          0.23898927867412567
+        ]
+      },
+      {
+        "id": "en/test/1728",
+        "premise": "But Blood's mind was now made up.",
+        "hypothesis": "As he tried to think, Blood remained indecisive.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.253537654876709,
+          0.4822912812232971,
+          0.2641710042953491
+        ]
+      },
+      {
+        "id": "en/test/4646",
+        "premise": "It is curious to note that terms not appearing on the list included slow learner, neurological handicap, brain injury, and educational handicap.",
+        "hypothesis": "Various mental disabilities were left off the list for an unknown reason.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2902238368988037,
+          0.45224565267562866,
+          0.25753048062324524
+        ]
+      },
+      {
+        "id": "en/test/2577",
+        "premise": "South Carolina's collaborative efforts produced another success the following year.",
+        "hypothesis": "No one in South Carolina worked together.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2511410415172577,
+          0.4971156120300293,
+          0.2517434060573578
+        ]
+      },
+      {
+        "id": "en/test/1741",
+        "premise": "Pitt, at his post beside the helmsman, turned intrepidly to face the excited gunner.",
+        "hypothesis": "The gunner was feeling giddy as Pitt went beside him.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29203352332115173,
+          0.44222715497016907,
+          0.2657393217086792
+        ]
+      },
+      {
+        "id": "en/test/4089",
+        "premise": "It's obvious that our discussion must rest until this ambitious book is published.",
+        "hypothesis": "After this book is published, we will schedule a meeting and then continue our discussion.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28929418325424194,
+          0.4449913203716278,
+          0.2657144367694855
+        ]
+      },
+      {
+        "id": "en/test/3241",
+        "premise": "The FBI legal attach�'s office in Paris first contacted the French government on August 16 or 17, shortly after speaking to the Minneapolis case agent on the telephone.",
+        "hypothesis": "The FBI isn't allowed to operate in France.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.29263198375701904,
+          0.4552959203720093,
+          0.25207212567329407
+        ]
+      },
+      {
+        "id": "en/test/3758",
+        "premise": "Last year, more than 48,000 New York State children were abused and neglected -injured, molested, emotionally abused, denied adequate care and supervision.",
+        "hypothesis": "Only 3 children in New York State were abused and neglected last year.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27395015954971313,
+          0.45864370465278625,
+          0.2674061357975006
+        ]
+      },
+      {
+        "id": "en/test/1170",
+        "premise": "The consequence is that there is a characteristic size distribution of avalanches in the ordered regime and a very dierent distribution in the chaotic regime.",
+        "hypothesis": "The regime is in the North.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3316716253757477,
+          0.42412710189819336,
+          0.24420133233070374
+        ]
+      },
+      {
+        "id": "en/test/2169",
+        "premise": "During the Sixth Crusade (1228- 1229), the Holy Roman Emperor Frederick II managed to secure Jerusalem for the Christians by negotiation.",
+        "hypothesis": "The emperor got Jerusalem for $1million.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3041445314884186,
+          0.4114972949028015,
+          0.2843581736087799
+        ]
+      },
+      {
+        "id": "en/test/2020",
+        "premise": "The largest bay on the northwest coast makes a fine harbor, but both the water and the beach can be dirty.",
+        "hypothesis": "The water and the beach may be dirty.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.302135705947876,
+          0.4321625232696533,
+          0.2657017409801483
+        ]
+      },
+      {
+        "id": "en/test/4598",
+        "premise": "The association of money names with other weights is  ouguiya (Mauritania) means `ounce.",
+        "hypothesis": "The is an connection between the names of money and the names of weights.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.37537601590156555,
+          0.3859967589378357,
+          0.23862718045711517
+        ]
+      },
+      {
+        "id": "en/test/4415",
+        "premise": "Property is an endless succession of bubbles in space, or cyberspace, with different people claiming an endless variety of interests in them.",
+        "hypothesis": "Property is just people saying they own something.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2918817102909088,
+          0.4514203369617462,
+          0.2566979229450226
+        ]
+      },
+      {
+        "id": "en/test/2152",
+        "premise": "In fact, it was the flashpoint for protests and riots during the busing controversy in the 1970s.",
+        "hypothesis": "There were protests in the 70's.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28668224811553955,
+          0.4412226974964142,
+          0.2720950245857239
+        ]
+      },
+      {
+        "id": "en/test/4788",
+        "premise": "I had not been on the Continent long when I wanted to buy some nylons for a girl friend.",
+        "hypothesis": "I had lived my whole life on the Continent.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2771657705307007,
+          0.46393874287605286,
+          0.2588954269886017
+        ]
+      },
+      {
+        "id": "en/test/3509",
+        "premise": "Indianapolis is truly one of the best places for actors to work for many",
+        "hypothesis": "It's hard to find work in Indianapolis if you're in the movie and theatre business, as it's mostly a technology town.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.26430046558380127,
+          0.4497000575065613,
+          0.28599944710731506
+        ]
+      },
+      {
+        "id": "en/test/4780",
+        "premise": "Two reference librarians were at a loss as to how to begin a search.",
+        "hypothesis": "The lack of search capabilities was an embarrassment for the reference librarians.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3094575107097626,
+          0.46337202191352844,
+          0.2271704524755478
+        ]
+      },
+      {
+        "id": "en/test/3271",
+        "premise": "The Washington Center's controllers were looking for the flight, but they were not told to look for primary radar returns.",
+        "hypothesis": "The controllers were not looking for primary radar returns.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.30946415662765503,
+          0.4473230540752411,
+          0.2432127594947815
+        ]
+      },
+      {
+        "id": "en/test/2965",
+        "premise": "We have made significant progress in addressing many of the areas in need of improvement in GAO and need to continue these efforts.",
+        "hypothesis": "We could not come up with a single solution to help improve GAO.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2854432463645935,
+          0.48182815313339233,
+          0.23272861540317535
+        ]
+      },
+      {
+        "id": "en/test/1796",
+        "premise": "Then:   You ordered it?  he said in accents of unbelief, whilst Lord Julian raised his eyebrows.",
+        "hypothesis": "His accents were unbelievable when he spoke.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2943275570869446,
+          0.4423236548900604,
+          0.26334884762763977
+        ]
+      },
+      {
+        "id": "en/test/1133",
+        "premise": "I want to say that the autonomous agents comprising that community had, individually and collectively, the embodied know-how to get on with making a living in the natural games that constituted their world.",
+        "hypothesis": "The agents weren't able to be paid.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2924063503742218,
+          0.45071274042129517,
+          0.25688090920448303
+        ]
+      },
+      {
+        "id": "en/test/4174",
+        "premise": "The best tactic for a situation tainted by your own imperfection is to define yourself as the happy medium, superior to those on both your left and right.",
+        "hypothesis": "One's own imperfection can lead to a bad situation.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2936500608921051,
+          0.4594281315803528,
+          0.2469218373298645
+        ]
+      },
+      {
+        "id": "en/test/4042",
+        "premise": "The world's oldest and largest university press--Oxford--has just announced that it is canceling its poetry list.",
+        "hypothesis": "The prestige university does not have the funding to keep the poetry list active.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26867005228996277,
+          0.45527955889701843,
+          0.2760504484176636
+        ]
+      },
+      {
+        "id": "en/test/744",
+        "premise": "Brian in Plano Texas how are you doing today",
+        "hypothesis": "How are you Mary?",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27753332257270813,
+          0.4808424413204193,
+          0.24162419140338898
+        ]
+      },
+      {
+        "id": "en/test/385",
+        "premise": "But uh, they lived in a little country town outside of Augusta called Evans, and Evans still exists, and that's where a lot of my relatives still, still are too.",
+        "hypothesis": "They lived in Atlanta.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27403366565704346,
+          0.4612296521663666,
+          0.26473668217658997
+        ]
+      },
+      {
+        "id": "en/test/898",
+        "premise": "probably and they do it for how long you've been a member i think too",
+        "hypothesis": "I think it depends on how long you've been a member.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2827114462852478,
+          0.4600849449634552,
+          0.2572036385536194
+        ]
+      },
+      {
+        "id": "en/test/1252",
+        "premise": "The legal philosophy of the Confederacy triumphed, both in substance and in style.",
+        "hypothesis": "The legal philosophy was defeated.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2973771095275879,
+          0.453359454870224,
+          0.24926342070102692
+        ]
+      },
+      {
+        "id": "en/test/1310",
+        "premise": "If Godzilla' is fitter when coupled to the first species' econeighbors than that species, that species goes extinct in its niche and is replaced by Godzilla'.",
+        "hypothesis": "It is technically impossible for a species to go extinct.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3012111783027649,
+          0.4407813549041748,
+          0.2580074071884155
+        ]
+      },
+      {
+        "id": "en/test/3458",
+        "premise": "Many PAPD officers were on the ground floors of the complex-some assisting in evacuation, others manning the PAPD desk in 5 WTC or assisting at lobby command posts.",
+        "hypothesis": "These officers were assigned to operate radio equipment.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3151470124721527,
+          0.43200555443763733,
+          0.25284743309020996
+        ]
+      },
+      {
+        "id": "en/test/4885",
+        "premise": "In fact there are well over one hundred syllothetic modifiers.",
+        "hypothesis": "There are more than 100 syllothetic modifiers.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31989774107933044,
+          0.4547322690486908,
+          0.22537000477313995
+        ]
+      },
+      {
+        "id": "en/test/520",
+        "premise": "oh but anyway anyway um my kids are now twenty one and twenty four so i don't have to",
+        "hypothesis": "I might have to since they are close in age.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26628193259239197,
+          0.4654356837272644,
+          0.26828238368034363
+        ]
+      },
+      {
+        "id": "en/test/3152",
+        "premise": "The profile was derived from information on the Passenger Name Record and did not include factors such as race, creed, color, or national origin.",
+        "hypothesis": "Race and creed were not factors used to develop passenger profiles.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31707581877708435,
+          0.4388045072555542,
+          0.24411970376968384
+        ]
+      },
+      {
+        "id": "en/test/3126",
+        "premise": "PDBs were not routinely briefed to congressional leaders, though this item could have been in some other intelligence briefing.",
+        "hypothesis": "Congressional leaders may or may not have been aware of this PDB.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3053549826145172,
+          0.4580739736557007,
+          0.23657110333442688
+        ]
+      },
+      {
+        "id": "en/test/4881",
+        "premise": "But even though as a boy I lived on a ranch right on the Mexican border, I remember being mystified by ranching terms that crept into Western songs from north of us, cayuse, for example.",
+        "hypothesis": "Cayuse was used on the ranch.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3043268620967865,
+          0.422084242105484,
+          0.2735888659954071
+        ]
+      },
+      {
+        "id": "en/test/3834",
+        "premise": "I must therefore tell you why the Center on Philanthropy also deserves your support.",
+        "hypothesis": "I have to give you insight into why the Center on Philanthropy needs support from you.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.30399930477142334,
+          0.4431134760379791,
+          0.25288715958595276
+        ]
+      },
+      {
+        "id": "en/test/4334",
+        "premise": "The same can't be said for the New York Times. In its editorial on the cocaine controversy, the Times advised Bush to be honest, and to let the country take his measure.",
+        "hypothesis": "The Times said Bush should just lie to everone.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2561311423778534,
+          0.46152743697166443,
+          0.2823413908481598
+        ]
+      },
+      {
+        "id": "en/test/2059",
+        "premise": "Napoleon attacked and destroyed Catalonia's sacred shrine, the monastery at Montserrat.",
+        "hypothesis": "Napoleon was responsible for the destruction of the monastery at Montserrat.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3080933392047882,
+          0.434418261051178,
+          0.2574883997440338
+        ]
+      },
+      {
+        "id": "en/test/4532",
+        "premise": "How can one do that?",
+        "hypothesis": "How is it possible for one to do that?",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28401803970336914,
+          0.475335955619812,
+          0.24064606428146362
+        ]
+      },
+      {
+        "id": "en/test/94",
+        "premise": "I don't know whether he stayed in Augusta after that.",
+        "hypothesis": "He continued to live in Augusta.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2559385299682617,
+          0.4878436326980591,
+          0.256217896938324
+        ]
+      },
+      {
+        "id": "en/test/938",
+        "premise": "huh-uh uh not downhill we do have cross country skies and",
+        "hypothesis": "We own cross country skies.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2833735942840576,
+          0.45969414710998535,
+          0.25693222880363464
+        ]
+      },
+      {
+        "id": "en/test/4398",
+        "premise": "Wednesday, Clinton chose to talk about a different industry.",
+        "hypothesis": "Clinton refused to talk.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.24222227931022644,
+          0.5116903185844421,
+          0.24608740210533142
+        ]
+      },
+      {
+        "id": "en/test/2185",
+        "premise": "From May to mid-October, the Boston Harbor Cruise Company (Tel.",
+        "hypothesis": "There are cruises in the Boston Harbor.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.296858012676239,
+          0.4455890655517578,
+          0.2575529217720032
+        ]
+      },
+      {
+        "id": "en/test/2786",
+        "premise": "A German SCR system supplier installed SCR on a significant portion of the German capacity within outage periods consisting of less than four weeks.",
+        "hypothesis": "An SCR system is only in Australia.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3121418356895447,
+          0.4559064209461212,
+          0.2319517284631729
+        ]
+      },
+      {
+        "id": "en/test/913",
+        "premise": "spend it on the ones who who do have a chance",
+        "hypothesis": "Spend it on the options that might work.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28005605936050415,
+          0.4707334637641907,
+          0.24921053647994995
+        ]
+      },
+      {
+        "id": "en/test/2404",
+        "premise": "On your way, you'll pass the Palace of Fine Arts, a restored relic of the Panama-Pacific International Exposition.",
+        "hypothesis": "The Palace of Fine Arts is all original.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3181931972503662,
+          0.4386942982673645,
+          0.2431124746799469
+        ]
+      },
+      {
+        "id": "en/test/3561",
+        "premise": "I am therefore delighted to extend this invitation today giving you the opportunity to join us as a Charter Associate of the Center on Philanthropy.",
+        "hypothesis": "There was an unanimous vote for your appointment as Charter Associate of the Center on Philanthropy.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2980421185493469,
+          0.44690248370170593,
+          0.25505539774894714
+        ]
+      },
+      {
+        "id": "en/test/1295",
+        "premise": "He eventually added a cloister, a gallery, and a tower.",
+        "hypothesis": "He planned to add four things.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2906460165977478,
+          0.45045334100723267,
+          0.2589006721973419
+        ]
+      },
+      {
+        "id": "en/test/3716",
+        "premise": "You already understand the importance of storytelling, poetry, song, and theatre in fostering empathy, compassion, and the imagination.",
+        "hypothesis": "Storytelling, poetry, song, and theatre are unimportant and are absolutely useless in promoting empathy, compassion, and the imagination.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2903994619846344,
+          0.43607431650161743,
+          0.2735261619091034
+        ]
+      },
+      {
+        "id": "en/test/26",
+        "premise": "I was the only one that uh, ever run the regulators for the, the test in the miniature altitude chambers.",
+        "hypothesis": "There were a few of us who ran the regulators for the test.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.329702228307724,
+          0.4261198937892914,
+          0.244177907705307
+        ]
+      },
+      {
+        "id": "en/test/2157",
+        "premise": "For an authentic feel of old Portugal, slip into the cool entrance hall of theimpressive Leal Senado ( Loyal Senate  building), a fine example of colonial architecture.",
+        "hypothesis": "The Loyal Senate building is beautiful.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2931910455226898,
+          0.43569502234458923,
+          0.27111393213272095
+        ]
+      },
+      {
+        "id": "en/test/4100",
+        "premise": "The World Health Organization announced that a new strategy for treating tuberculosis could save 10 million lives over the next decade.",
+        "hypothesis": "The WHO has a strategy that can save millions from tuberculosis.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2910328805446625,
+          0.45718181133270264,
+          0.2517853379249573
+        ]
+      },
+      {
+        "id": "en/test/1463",
+        "premise": "A specific cloud, like our biosphere, presumably becomes kinetically trapped into a very special set of complex molecular species that happen to have formed as the cloud evolves.",
+        "hypothesis": "Some molecular species form when a cloud evolves.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3398711383342743,
+          0.43295419216156006,
+          0.22717466950416565
+        ]
+      },
+      {
+        "id": "en/test/4158",
+        "premise": "Monday through Friday delivery of James Surowiecki's Moneybox column, plus other Slate economic and financial articles.",
+        "hypothesis": "James Surowiecki's Moneybox column is delivered five days a week.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3052080273628235,
+          0.43627071380615234,
+          0.25852128863334656
+        ]
+      },
+      {
+        "id": "en/test/871",
+        "premise": "uh we get we get uh New Years Day Good Friday Memorial Day July Fourth Labor Day uh Thanksgiving and the day after and then Christmas and a day either side of it",
+        "hypothesis": "We get paid our full amount on all the holidays, even the day before and after Christmas.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29231375455856323,
+          0.42271628975868225,
+          0.28496992588043213
+        ]
+      },
+      {
+        "id": "en/test/2444",
+        "premise": "Leaf monkeys and long-tailed macaques are among the wildlife.",
+        "hypothesis": "They have monkeys there.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27764150500297546,
+          0.4800436794757843,
+          0.24231478571891785
+        ]
+      },
+      {
+        "id": "en/test/4988",
+        "premise": "Via di Ripetta imperceptibly merges into Via della Scrofa `Street of the Sow,' named after another ancient sculpture that is still preserved there.",
+        "hypothesis": "Via della Scrofa is named after another sculpture.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.35082727670669556,
+          0.39071977138519287,
+          0.25845301151275635
+        ]
+      },
+      {
+        "id": "en/test/1629",
+        "premise": "I shall always be grateful.",
+        "hypothesis": "I am eternally thankful.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26622265577316284,
+          0.48299840092658997,
+          0.25077900290489197
+        ]
+      },
+      {
+        "id": "en/test/3063",
+        "premise": "Searches of readily available databases could have unearthed the driver's licenses, the car registration, and the telephone listing.",
+        "hypothesis": "Investigators also requested access to professional databases.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.33866751194000244,
+          0.4256861209869385,
+          0.23564644157886505
+        ]
+      },
+      {
+        "id": "en/test/1323",
+        "premise": "The chaotic regime contrasts starkly with the ordered regime.",
+        "hypothesis": "One cannot tell the chaotic regime from the ordered regime; they are too similar.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.28553804755210876,
+          0.4630957543849945,
+          0.2513662278652191
+        ]
+      },
+      {
+        "id": "en/test/4418",
+        "premise": "Will anyone remember the World Trade Organization in half a century?",
+        "hypothesis": "The longevity of the World Trade Organization is secure for the next century.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2980476915836334,
+          0.44187942147254944,
+          0.26007288694381714
+        ]
+      },
+      {
+        "id": "en/test/4344",
+        "premise": "Obviously, being fairly arbitrary, many of the AFI choices may not lend themselves to sound cultural interpretation.",
+        "hypothesis": "A study of culture based on AFI choices could lead to some sharply contradictory interpretations.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3299104869365692,
+          0.437674343585968,
+          0.23241516947746277
+        ]
+      },
+      {
+        "id": "en/test/4",
+        "premise": "And I thought that was a privilege, and it's still, it's still, I was the only nine two-two Ex-O which was my AFFC Air Force Career field.",
+        "hypothesis": "I was under the impression that I was the only one with that number at the AFFC Air Force Career field.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27930381894111633,
+          0.4234219193458557,
+          0.29727423191070557
+        ]
+      },
+      {
+        "id": "en/test/4906",
+        "premise": "If Esperanto is aspiring to become a  real  language, then it must begin to behave like one and, before long, it will begin to suffer the same  weaknesses  that natural languages suffer--polysemy and pleurisemy.",
+        "hypothesis": "Esperanto is spoken by less than one percent of the world's population.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3198038339614868,
+          0.42104506492614746,
+          0.25915107131004333
+        ]
+      },
+      {
+        "id": "en/test/2655",
+        "premise": "To be a Value Creating, Customer Focused Partner in Business Results",
+        "hypothesis": "It's ideal to be focused on profit and not customers.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2874913811683655,
+          0.47685500979423523,
+          0.23565366864204407
+        ]
+      },
+      {
+        "id": "en/test/4002",
+        "premise": "Please prayerfully consider how much you can give.",
+        "hypothesis": "I know you are religious, so please think of how God would consider donation.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2762913107872009,
+          0.4572508931159973,
+          0.26645785570144653
+        ]
+      },
+      {
+        "id": "en/test/159",
+        "premise": "She hated that, and she used to tell her sister every day, she said that, that You are doing wrong.",
+        "hypothesis": "She always encouraged her sister.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2550240159034729,
+          0.4929499924182892,
+          0.2520259916782379
+        ]
+      },
+      {
+        "id": "en/test/916",
+        "premise": "so if we have the opportunity just because it's quieter",
+        "hypothesis": "It's quieter there.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.25791722536087036,
+          0.4823567271232605,
+          0.25972601771354675
+        ]
+      },
+      {
+        "id": "en/test/2973",
+        "premise": "Just as there is a spectrum of alcohol use problems, there may be a family of solutions.",
+        "hypothesis": "Different patients find that different methods work for them in their recover from alcohol abuse.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27474626898765564,
+          0.47874531149864197,
+          0.2465084344148636
+        ]
+      },
+      {
+        "id": "en/test/2519",
+        "premise": "Since Title 7 requires the validity of travel claims to be established prior to certification for payment, we believe that listing all expenses individually on the travel voucher helps satisfy this requirement.",
+        "hypothesis": "Title 7 is about cookies.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3375388979911804,
+          0.40673667192459106,
+          0.2557244300842285
+        ]
+      },
+      {
+        "id": "en/test/1961",
+        "premise": "What if he can?  Blood interrupted carelessly.",
+        "hypothesis": "But what if he can not? asked Blood, politely.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2613646984100342,
+          0.484194278717041,
+          0.2544409930706024
+        ]
+      },
+      {
+        "id": "en/test/474",
+        "premise": "So all that stressing and I mean, I had every reason to stress today, it was like, you're giving something you don't know how to do, and it's like here do it.",
+        "hypothesis": "I did not know how to do the job I was assigned today.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.25907590985298157,
+          0.4632326066493988,
+          0.27769142389297485
+        ]
+      },
+      {
+        "id": "en/test/1973",
+        "premise": "A boat that had approached unnoticed from the shore came scraping and bumping against the great red hull of the Arabella, and a raucous voice sent up a hailing shout.",
+        "hypothesis": "The boat had purposefully collided with the Arabella knowing it was there.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2861863076686859,
+          0.44373106956481934,
+          0.2700826823711395
+        ]
+      },
+      {
+        "id": "en/test/4647",
+        "premise": "The Cambridge University Press has seen fit to honor the 200th anniversary of Boswell's Life of Johnson with a collection of fourteen essays on the biographer and his subject.",
+        "hypothesis": "Boswell spent a few years in the company of Johnson.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28369444608688354,
+          0.4496772587299347,
+          0.26662829518318176
+        ]
+      },
+      {
+        "id": "en/test/701",
+        "premise": "there you go well does you husband uh what does he think of your uh T-shirt and and",
+        "hypothesis": "Your t-shirt is very nice.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26705288887023926,
+          0.4605397582054138,
+          0.27240732312202454
+        ]
+      },
+      {
+        "id": "en/test/3981",
+        "premise": "Consequently, I know that you go to extra lengths to be compassionate and caring to others.",
+        "hypothesis": "I know you care a lot about the people around you.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.260545551776886,
+          0.4699441194534302,
+          0.26951026916503906
+        ]
+      },
+      {
+        "id": "en/test/566",
+        "premise": "i'm trying to hang in there",
+        "hypothesis": "I will let go and never look back.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.23039238154888153,
+          0.5133010745048523,
+          0.256306529045105
+        ]
+      },
+      {
+        "id": "en/test/4363",
+        "premise": "Stepping on Some Mighty Big Toes",
+        "hypothesis": "The toes are considered to be small.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2839988172054291,
+          0.47117698192596436,
+          0.24482417106628418
+        ]
+      },
+      {
+        "id": "en/test/1030",
+        "premise": "Wittgenstein's point is that one cannot, in general, reduce statements at a higher level to a finitely specified set of necessary and suYcient statements at a lower level.",
+        "hypothesis": "Wittgenstein rarely spoke more than one or two words, as he believed this was all that was required to communicate.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.31107568740844727,
+          0.4467765688896179,
+          0.24214772880077362
+        ]
+      },
+      {
+        "id": "en/test/1051",
+        "premise": "The remaining dimensions are imagined as curled up on the Planck length scale in what are called  Calabi-Yau  spaces, or more generally, compactified moduli.",
+        "hypothesis": "Calabi-Yau spaces are represented in scientific literature.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3601715862751007,
+          0.4078352749347687,
+          0.23199312388896942
+        ]
+      },
+      {
+        "id": "en/test/3893",
+        "premise": "It gives me great pleasure to extend to you this invitation to Join the Republican Senatorial Inner Circle in a celebration of our spirit at our Republican National Convention in Houston, Texas, August 16-20.",
+        "hypothesis": "The Republican National Convention is always in April.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27058640122413635,
+          0.4487021565437317,
+          0.28071141242980957
+        ]
+      },
+      {
+        "id": "en/test/4503",
+        "premise": "Time interviews Deborah Eappen, grieving mother in the Louise Woodward au pair case.",
+        "hypothesis": "Debrah Eappen did not like giving an interview to Time.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.25427621603012085,
+          0.48715153336524963,
+          0.2585722804069519
+        ]
+      },
+      {
+        "id": "en/test/1352",
+        "premise": "As with other  low-ability  groups, teachers often have lower expectations for transition-class students and teach them in a less stimulating fashion than they do other children.",
+        "hypothesis": "Teachers treat some groups of students different than others.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3043268322944641,
+          0.4491315484046936,
+          0.24654164910316467
+        ]
+      },
+      {
+        "id": "en/test/2171",
+        "premise": "During the Sixth Crusade (1228- 1229), the Holy Roman Emperor Frederick II managed to secure Jerusalem for the Christians by negotiation.",
+        "hypothesis": "The emperor traded for Persia.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3071640431880951,
+          0.4227781593799591,
+          0.2700577974319458
+        ]
+      },
+      {
+        "id": "en/test/4322",
+        "premise": "The conventional wisdom in Washington this week is that young writers such as Glass who crack up deserve sympathy because the system pressures them into becoming stars before they are journeymen.",
+        "hypothesis": "Glass is a writer.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29378464818000793,
+          0.4584234356880188,
+          0.24779193103313446
+        ]
+      },
+      {
+        "id": "en/test/4969",
+        "premise": "The Auld Alliance, a treaty of accord between France and Scotland, was born.",
+        "hypothesis": "Japan and Sweden are members of the Auld Alliance.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.32321974635124207,
+          0.41890016198158264,
+          0.2578800618648529
+        ]
+      },
+      {
+        "id": "en/test/3466",
+        "premise": "For example, the Mayor and Police Commissioner consulted with the Chief of the Department of the FDNY at approximately 9:20.",
+        "hypothesis": "The Mayor and Police Commissioner disagreed about how to proceed.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2971997857093811,
+          0.4614512622356415,
+          0.2413490265607834
+        ]
+      },
+      {
+        "id": "en/test/1735",
+        "premise": "In his cabin on the starboard side Lord Julian, disturbed by the same sounds, was already astir and hurriedly dressing.",
+        "hypothesis": "Lord Julian put on a clown suit in his cabin.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.297325998544693,
+          0.43701547384262085,
+          0.26565849781036377
+        ]
+      },
+      {
+        "id": "en/test/4417",
+        "premise": "Will anyone remember the World Trade Organization in half a century?",
+        "hypothesis": "The World Trade Organization has made no memorable impact on history.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2666516900062561,
+          0.47947758436203003,
+          0.25387075543403625
+        ]
+      },
+      {
+        "id": "en/test/1647",
+        "premise": "Captain Blood bared his head and bowed silently in a greeting which she returned composedly and formally.",
+        "hypothesis": "Captain Blood bowed silently because he was a quiet man.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28236591815948486,
+          0.4547792077064514,
+          0.26285481452941895
+        ]
+      },
+      {
+        "id": "en/test/2553",
+        "premise": "Technology is highly integrated with the business processes in these organizations because technology is viewed as an enabler for the business, not just a tool.",
+        "hypothesis": "Advanced scheduling software is one of the key technologies businesses focus on.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.32553917169570923,
+          0.42444390058517456,
+          0.2500169575214386
+        ]
+      },
+      {
+        "id": "en/test/3268",
+        "premise": "On KSM's assistance to al Qaeda, see Intelligence reports, interrogations of KSM, July 12, 2003 (two reports).",
+        "hypothesis": "There are no documents containing information about the KSM.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3138808012008667,
+          0.44785720109939575,
+          0.23826201260089874
+        ]
+      },
+      {
+        "id": "en/test/3059",
+        "premise": "On September 9, dramatic news arrived from Afghanistan.",
+        "hypothesis": "We were told about the impending attack on Septemeber 9.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28300219774246216,
+          0.44229641556739807,
+          0.27470141649246216
+        ]
+      },
+      {
+        "id": "en/test/3588",
+        "premise": "Linda Hardwick Director of Development &amp",
+        "hypothesis": "Linda Hardwick Chief Executive Officer",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2999117970466614,
+          0.4743359088897705,
+          0.22575227916240692
+        ]
+      },
+      {
+        "id": "en/test/4239",
+        "premise": "Still, the inevitable death of Pokemon presents us with the opportunity to create the replacement phenom and cash in on it.",
+        "hypothesis": "Digimon will be the cash cow that will replace Pokemon after its death.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29007795453071594,
+          0.43567126989364624,
+          0.2742508053779602
+        ]
+      },
+      {
+        "id": "en/test/3698",
+        "premise": "With your involvement, we can help kids - like the little boy pictured on this page-become better citizens.",
+        "hypothesis": "We work to help improve kids' lives.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2842848002910614,
+          0.46479642391204834,
+          0.25091874599456787
+        ]
+      },
+      {
+        "id": "en/test/991",
+        "premise": "is it we have almost an acre yeah it's it's funny because we have um",
+        "hypothesis": "This is no joking matter, we have just one square foot of land.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2739332318305969,
+          0.4588463604450226,
+          0.2672203779220581
+        ]
+      },
+      {
+        "id": "en/test/2030",
+        "premise": "Natural enough, then, that involvement in World War II began with a British Commonwealth Air Training Plan, using Canada's safer skies to prepare pilots for combat.",
+        "hypothesis": "Canada's skies were more dangerous.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.30278611183166504,
+          0.42314091324806213,
+          0.2740729749202728
+        ]
+      },
+      {
+        "id": "en/test/1840",
+        "premise": "He stepped back, a baffled, impotent man.",
+        "hypothesis": "He was shocked and taken aback.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26483941078186035,
+          0.48148325085639954,
+          0.2536773979663849
+        ]
+      },
+      {
+        "id": "en/test/524",
+        "premise": "yeah uh-huh yeah well this is Fresno uh-huh",
+        "hypothesis": "I'm telling you that this is Fresno.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.301553338766098,
+          0.44110023975372314,
+          0.2573464512825012
+        ]
+      },
+      {
+        "id": "en/test/2769",
+        "premise": "Present your basis for assessing the reliability of the data as undetermined.",
+        "hypothesis": "An explanation is required as to why the data reliability was not determined.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3145396411418915,
+          0.4559169411659241,
+          0.22954346239566803
+        ]
+      },
+      {
+        "id": "en/test/172",
+        "premise": "But I was like, forget it, I'm going to eat lunch I was hungry.",
+        "hypothesis": "I was hungry so i decided to eat my lunch.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.25819218158721924,
+          0.45523786544799805,
+          0.2865699827671051
+        ]
+      },
+      {
+        "id": "en/test/4819",
+        "premise": "The law of trademarks, which fills more than two volumes of the Annotated U.S.",
+        "hypothesis": "There are two volumes of laws concerning trademarks.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.35934391617774963,
+          0.4384170174598694,
+          0.20223912596702576
+        ]
+      },
+      {
+        "id": "en/test/4537",
+        "premise": "If one had the 1984 edition, he might well resent having to buy this book rather than a briefer (and less expensive) Supplement.",
+        "hypothesis": "The book is not for sale.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.27801647782325745,
+          0.4618751108646393,
+          0.26010847091674805
+        ]
+      },
+      {
+        "id": "en/test/1885",
+        "premise": "Hark to the gentleman!  he mocked.",
+        "hypothesis": "The gentleman was made fun of because he was not wearing the proper attire for the occasion.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2684619426727295,
+          0.4546598196029663,
+          0.2768782377243042
+        ]
+      },
+      {
+        "id": "en/test/4820",
+        "premise": "The law of trademarks, which fills more than two volumes of the Annotated U.S.",
+        "hypothesis": "Trademark law is very complicated and requires frequent references to the two volumes of the Annotated U.S.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3500802516937256,
+          0.4101855456829071,
+          0.23973417282104492
+        ]
+      },
+      {
+        "id": "en/test/1804",
+        "premise": "But many could not resolve one way or the other until they were satisfied upon several questions, and chiefly upon one which was voiced by Ogle.",
+        "hypothesis": "Ogle had many concerns, of which had yet to be satiated.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29069867730140686,
+          0.4644075632095337,
+          0.24489371478557587
+        ]
+      },
+      {
+        "id": "en/test/58",
+        "premise": "Well it got to where there's two or three aircraft arrive in a week and I didn't know where they're flying to.",
+        "hypothesis": "The increased aircraft traffic is troublesome.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28424450755119324,
+          0.4554707109928131,
+          0.26028478145599365
+        ]
+      },
+      {
+        "id": "en/test/581",
+        "premise": "you know all my children excel they're they're really good and i guess no he learns from the older boys too but",
+        "hypothesis": "My kids are truly idiotic.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2494787573814392,
+          0.4979148209095001,
+          0.2526063919067383
+        ]
+      },
+      {
+        "id": "en/test/482",
+        "premise": "And unfortunately we moved again.",
+        "hypothesis": "We never moved after that.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2344207614660263,
+          0.5158567428588867,
+          0.2497224360704422
+        ]
+      },
+      {
+        "id": "en/test/1875",
+        "premise": "And the quixotic fool is running into danger at the present moment on our behalf.",
+        "hypothesis": "He is heading into danger right now.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2683548331260681,
+          0.488243043422699,
+          0.2434021383523941
+        ]
+      },
+      {
+        "id": "en/test/552",
+        "premise": "yeah she was great you know she",
+        "hypothesis": "I think she knows that she was awesome.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2550133764743805,
+          0.47737374901771545,
+          0.26761290431022644
+        ]
+      },
+      {
+        "id": "en/test/257",
+        "premise": "Um, are there any, you said you don't remember reading anything in particular, like when you were older in school, were there any books that you read that you liked or hated?",
+        "hypothesis": "I know you loved every book you read.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.261773020029068,
+          0.4538690745830536,
+          0.2843579053878784
+        ]
+      },
+      {
+        "id": "en/test/2706",
+        "premise": "Protection of transportation, energy, emergency services, financial services, and communication systems is becoming increasingly important because they rely heavily on information technology.",
+        "hypothesis": "Financial services and communication systems are yet to join the information technology field.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.31940221786499023,
+          0.4393678605556488,
+          0.24122990667819977
+        ]
+      },
+      {
+        "id": "en/test/580",
+        "premise": "you know all my children excel they're they're really good and i guess no he learns from the older boys too but",
+        "hypothesis": "I am very proud of how much my children know.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2616351246833801,
+          0.4736335575580597,
+          0.2647313177585602
+        ]
+      },
+      {
+        "id": "en/test/4211",
+        "premise": "They Shoot Students, Don't They?",
+        "hypothesis": "They make cupcakes for students, don't they?",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2730293273925781,
+          0.4717307686805725,
+          0.25523993372917175
+        ]
+      },
+      {
+        "id": "en/test/1949",
+        "premise": "Before we've run another half-mile we shall be within range.   Wolverstone swore elaborately, then suddenly checked.",
+        "hypothesis": "Wolverstone let out a curse as they realized that there was another half-mile before they were in range.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3028765320777893,
+          0.43150684237480164,
+          0.26561659574508667
+        ]
+      },
+      {
+        "id": "en/test/2281",
+        "premise": "Beyond Payangan, the little-used road wends its way through scenic countryside all the way to Batur (see pagea59).",
+        "hypothesis": "The road is 15 miles from Payangan to Batur.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2951507568359375,
+          0.42219409346580505,
+          0.28265514969825745
+        ]
+      },
+      {
+        "id": "en/test/3976",
+        "premise": ".. Make our society better.",
+        "hypothesis": "Please help improve our society.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2815839946269989,
+          0.4783112406730652,
+          0.2401048094034195
+        ]
+      },
+      {
+        "id": "en/test/1755",
+        "premise": "Wait!  Blood bade him, interrupting, and he set a restraining hand upon the gunner's arm.",
+        "hypothesis": "Blood allowed the gunner to carry on with what he had to say.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2859397530555725,
+          0.45121440291404724,
+          0.26284587383270264
+        ]
+      },
+      {
+        "id": "en/test/1083",
+        "premise": "The garlands in eighteenth-century buildings are sculpted or painted versions of the sashes and flowered ornaments worn by men and women.",
+        "hypothesis": "Many of the garlands are of ivy.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2998718321323395,
+          0.4346894919872284,
+          0.2654387056827545
+        ]
+      },
+      {
+        "id": "en/test/4677",
+        "premise": "Nothing underscores the subtle complexities of language more strikingly than the miscommunications that occur among pilots, crew members, and air traffic controllers.",
+        "hypothesis": "Pilots are always perfect communicators.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.28338491916656494,
+          0.48685142397880554,
+          0.22976364195346832
+        ]
+      },
+      {
+        "id": "en/test/4720",
+        "premise": "He rhymed it with pandemonium ; judging from the lawsuits which proliferate over condominium parking spaces, balcony barbecues, and pets pooping in the halls, he might have been right to use the neologism.",
+        "hypothesis": "He wrote a poem with the word.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3082759976387024,
+          0.4246421754360199,
+          0.2670818269252777
+        ]
+      },
+      {
+        "id": "en/test/3872",
+        "premise": "FOREVER PLAID - a name that connotes the continuation of traditional values, of family, home and harmony.",
+        "hypothesis": "Our CEO came up with the name FOREVER PLAID.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31840550899505615,
+          0.43649226427078247,
+          0.24510228633880615
+        ]
+      },
+      {
+        "id": "en/test/1990",
+        "premise": "And if ye' weren't a fool, Ogle, you wouldn't need me to tell you this.",
+        "hypothesis": "Ogle was foolish in believing in the existence of Santa Claus.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.266329288482666,
+          0.47292864322662354,
+          0.2607420086860657
+        ]
+      },
+      {
+        "id": "en/test/3874",
+        "premise": "As the local host organization for the National Council of International Visitors, the South Africa Internship Program and Chinese Medical Internships, in 1999 the Center welcomed over 100 guests to central Indiana.",
+        "hypothesis": "The center was happy to greet 100 South African college students in July.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2865065634250641,
+          0.43629077076911926,
+          0.2772027254104614
+        ]
+      },
+      {
+        "id": "en/test/3334",
+        "premise": "Dubai, a modern city with easy access to a major airport, travel agencies, hotels, and Western commercial establishments, was an ideal transit point.",
+        "hypothesis": "Dubai was the first choice as a transit point.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3020252585411072,
+          0.4316355288028717,
+          0.26633915305137634
+        ]
+      },
+      {
+        "id": "en/test/1559",
+        "premise": "Ogle wrenched it free, with an oath.",
+        "hypothesis": "Ogle just kept staring at it, without moving.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.25846919417381287,
+          0.48302409052848816,
+          0.2585066854953766
+        ]
+      },
+      {
+        "id": "en/test/772",
+        "premise": "you know it's easy to say well we'll build a concrete hole and and nothing'll happen and then they'll say well the only way to test that is over a long period of time so",
+        "hypothesis": "They need to give it time for the concrete to set before beginning any tests.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27570438385009766,
+          0.46232423186302185,
+          0.2619713246822357
+        ]
+      },
+      {
+        "id": "en/test/794",
+        "premise": "well i don't think he i don't think he wants to do that but he he certainly would be like an elder statesman or whatever",
+        "hypothesis": "I know he would love to do that!",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2768038809299469,
+          0.46611979603767395,
+          0.2570762634277344
+        ]
+      },
+      {
+        "id": "en/test/3531",
+        "premise": "As you know, the membership of this group includes those friends and alumni who contribute $1,000 or more annually to the law school.",
+        "hypothesis": "Some of this group's members have donated over $100k to the school.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27332478761672974,
+          0.4412498474121094,
+          0.2854253351688385
+        ]
+      },
+      {
+        "id": "en/test/2902",
+        "premise": "Thus, the demographic data for the same 5-Digit ZIP Code could be averaged into the totals for two different quartiles.",
+        "hypothesis": "Demographic data could be averaged.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.35385483503341675,
+          0.405486136674881,
+          0.24065902829170227
+        ]
+      },
+      {
+        "id": "en/test/3469",
+        "premise": "All but 2 of the 15 muscle hijackers were admitted as tourists, affording a six-month stay in the United States (except in the case of Mihdhar, who received four months).",
+        "hypothesis": "Most of the hijackers were admitted as tourists.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29856884479522705,
+          0.4447135627269745,
+          0.25671762228012085
+        ]
+      },
+      {
+        "id": "en/test/3367",
+        "premise": "Two days later, Ahmed al Ghamdi and Abdul Aziz al Omari, who had been living in New Jersey with Hazmi and Hanjour, flew to Miami-probably signifying that the four hijacking teams had finally been assigned.",
+        "hypothesis": "Ahmed al Ghamdi, Abdul Aziz al Omari, Hazmi and Hanjour lived together in New Jersey.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.29201483726501465,
+          0.4203265309333801,
+          0.28765869140625
+        ]
+      },
+      {
+        "id": "en/test/3825",
+        "premise": "On behalf of President Bush, I look forward to working with you in the future.",
+        "hypothesis": "I work with President Bush.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2743835151195526,
+          0.4691125750541687,
+          0.2565039396286011
+        ]
+      },
+      {
+        "id": "en/test/443",
+        "premise": "When DOT took his property, we moved to a smaller, smaller area in Concord where you are not allowed to have animals because it's zoned and so that's the end of the animal story.",
+        "hypothesis": "We sold all our animals when we moved to Concord.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2813691198825836,
+          0.44621604681015015,
+          0.272414892911911
+        ]
+      },
+      {
+        "id": "en/test/806",
+        "premise": "it's a it's a plastic automatic weapon that fires",
+        "hypothesis": "The weapon is made from cardboard.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.30482718348503113,
+          0.4390733540058136,
+          0.2560994625091553
+        ]
+      },
+      {
+        "id": "en/test/496",
+        "premise": "Everything is linked, and gosh, I don't even know how long.",
+        "hypothesis": "I don't know how long the story is running.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2652473747730255,
+          0.472371369600296,
+          0.2623812258243561
+        ]
+      },
+      {
+        "id": "en/test/3298",
+        "premise": "While he continued to monitor the citywide SOD channel, which NYPD helicopters were using, he also monitored the point-to-point tactical channel that the ESU teams climbing in the towers would use.",
+        "hypothesis": "Nobody was using the citywide SOD channel.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2738073766231537,
+          0.4602479636669159,
+          0.26594462990760803
+        ]
+      },
+      {
+        "id": "en/test/2779",
+        "premise": "Aviation Progress Being Made, but Long-term Attention Is Needed.",
+        "hypothesis": "Long term attention is required despite short term progress.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3073115050792694,
+          0.4481807053089142,
+          0.2445077747106552
+        ]
+      },
+      {
+        "id": "en/test/895",
+        "premise": "and let's see twenty years ago i guess we're were just beginning to get into what they were calling the uh the sex revolution where uh after the pill and uh uh",
+        "hypothesis": "The Pill was part of the Sex Revolution.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2928009629249573,
+          0.43789613246917725,
+          0.2693028748035431
+        ]
+      },
+      {
+        "id": "en/test/2036",
+        "premise": "The best ports in the Mediterranean are June, July, August, and Mae,  said the 16th-century Venetian admiral Andrea Doria, noting that beyond the summer sailing season, a fleet couldn't do better than shelter here.",
+        "hypothesis": "The summer season has the best ports.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.30221426486968994,
+          0.4138665497303009,
+          0.28391918540000916
+        ]
+      },
+      {
+        "id": "en/test/1569",
+        "premise": "And yet he has been what he has been and done what he has done in these last three years,  said she, but she said it sorrowfully now, without any of her earlier scorn.",
+        "hypothesis": "She did not like that he had murdered many men in the past three years.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.23105256259441376,
+          0.4672805964946747,
+          0.301666796207428
+        ]
+      },
+      {
+        "id": "en/test/1558",
+        "premise": "Ogle wrenched it free, with an oath.",
+        "hypothesis": "Ogle did not stay quiet when he wrenched it free.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2562410533428192,
+          0.4862340986728668,
+          0.2575247883796692
+        ]
+      },
+      {
+        "id": "en/test/4393",
+        "premise": "Or, consider the issue of informing Congress about covert actions.",
+        "hypothesis": "Congress cannot be informed about covert actions.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.30011337995529175,
+          0.4647289216518402,
+          0.23515765368938446
+        ]
+      },
+      {
+        "id": "en/test/3675",
+        "premise": "This is a wonderful time of year for storytelling.",
+        "hypothesis": "I would rather wait until December to tell stories.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.24492664635181427,
+          0.4769670367240906,
+          0.27810630202293396
+        ]
+      },
+      {
+        "id": "en/test/1148",
+        "premise": "Until you do the arithmetic, you do not realize that, in Lincoln's mind, the critical moment of the founding was 1776, the signing of the Declaration of Independence.",
+        "hypothesis": "Many historians disagree with Lincoln's interpretation of these dates.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27701854705810547,
+          0.4463198781013489,
+          0.27666154503822327
+        ]
+      },
+      {
+        "id": "en/test/1503",
+        "premise": "I assure you, sir, that I was fully informed of all.",
+        "hypothesis": "I am telling you that I was given knowledge about everything.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.30461055040359497,
+          0.45239564776420593,
+          0.24299384653568268
+        ]
+      },
+      {
+        "id": "en/test/3789",
+        "premise": "I hope to hear from you soon.",
+        "hypothesis": "I hope we talk soon.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2688252329826355,
+          0.47743362188339233,
+          0.25374114513397217
+        ]
+      },
+      {
+        "id": "en/test/2046",
+        "premise": "The roadless Na Pali Coast on the heavenly north shore is one of the world's most challenging and majestic seaside hikes (see page 71).",
+        "hypothesis": "The Na Pali Coast can be a challenging hike",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3157425820827484,
+          0.4202069342136383,
+          0.2640504539012909
+        ]
+      },
+      {
+        "id": "en/test/617",
+        "premise": "so this is this is not your first experience with  with a dog",
+        "hypothesis": "This is not your first time handling a domesticated animal.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2546258270740509,
+          0.4978224039077759,
+          0.24755176901817322
+        ]
+      },
+      {
+        "id": "en/test/3630",
+        "premise": "The boxes will be marked with the names of Cassie, Corey, Rachel, Isaiah, Kelly, Kyle, and the other students of Columbine High School who lost their lives earlier this year.",
+        "hypothesis": "At least 6 Columbine High School students died earlier this year.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.296167254447937,
+          0.42566660046577454,
+          0.2781660854816437
+        ]
+      },
+      {
+        "id": "en/test/4508",
+        "premise": "The impassioned cover story warns that America's national parks are being ruined by overcrowding, underfunding, invasion by exotic plant and animal species, and commercial development.",
+        "hypothesis": "The national parks are too crowded.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28744930028915405,
+          0.4503413736820221,
+          0.2622092664241791
+        ]
+      },
+      {
+        "id": "en/test/802",
+        "premise": "oh God course the name just uh the name just slipped my mind but it's the Peace of Parliament",
+        "hypothesis": "I often have trouble recalling names on the spot.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2724241614341736,
+          0.45357999205589294,
+          0.2739957869052887
+        ]
+      },
+      {
+        "id": "en/test/414",
+        "premise": "It's like one file with a whole bunch of tabs, of different, you know, each tab has like a different spreadsheet on it.",
+        "hypothesis": "The page is just  one list of numbers.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.3324440121650696,
+          0.4118656516075134,
+          0.2556902766227722
+        ]
+      },
+      {
+        "id": "en/test/4428",
+        "premise": "Still alive at 93, de Kooning is now neither artist nor channel surfer.",
+        "hypothesis": "De Kooning ended up dying at 72.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2687458395957947,
+          0.452571302652359,
+          0.2786828279495239
+        ]
+      },
+      {
+        "id": "en/test/120",
+        "premise": "We had full pressure suits there in the aircraft just, just like the astronauts wore, except ours was totally silver, silver uh, boot and everything, to reflect heat, of course.",
+        "hypothesis": "Our suits were nothing like what the astronauts had.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2857610285282135,
+          0.44574007391929626,
+          0.26849886775016785
+        ]
+      },
+      {
+        "id": "en/test/764",
+        "premise": "it's probably more because i just enjoy the coverage than it is because i don't have time to read the paper you know",
+        "hypothesis": "They cover a lot more than you will get from the paper.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27118414640426636,
+          0.45745158195495605,
+          0.2713642120361328
+        ]
+      },
+      {
+        "id": "en/test/1936",
+        "premise": "Oh, but--by your leave--surely there is nothing to be apprehended from Colonel Bishop.",
+        "hypothesis": "Colonel Bishop said something that was to be apprehended with utmost disgust.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2900765836238861,
+          0.4574386179447174,
+          0.2524847984313965
+        ]
+      },
+      {
+        "id": "en/test/1362",
+        "premise": "God is mentioned only as  nature's God,  by virtue of which every people is entitled to  a separate and equal station  in the community of nations.",
+        "hypothesis": "People are never equal.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.26495054364204407,
+          0.479360967874527,
+          0.2556884288787842
+        ]
+      },
+      {
+        "id": "en/test/3329",
+        "premise": "The terrorism fostered by Bin Ladin and al Qaeda was different from anything the government had faced before.",
+        "hypothesis": "The government had faced terrorism like this many times before.",
+        "label": "contradiction",
+        "language": "en",
+        "gold": "1",
+        "prediction": "1",
+        "correct": true,
+        "label_probabilities": [
+          0.2735881507396698,
+          0.45990049839019775,
+          0.26651135087013245
+        ]
+      },
+      {
+        "id": "en/test/3978",
+        "premise": "In this way the YMCA seeks to fulfill its  To put Christian principles into practice through programs that encourage personal growth and build health of spirit, mind and body for all.",
+        "hypothesis": "The YMCA has over 100 programs that promote Christian principles.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.2931649386882782,
+          0.45248234272003174,
+          0.2543526887893677
+        ]
+      },
+      {
+        "id": "en/test/3943",
+        "premise": "I've been affiliated with the IRT for 17 years.",
+        "hypothesis": "I have worked on fundraising for the IRT for over a decade.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.28260913491249084,
+          0.4577690064907074,
+          0.259621798992157
+        ]
+      },
+      {
+        "id": "en/test/1751",
+        "premise": "His hand closed over the butt of one of the pistols slung before him.",
+        "hypothesis": "He had put a gun right on himself.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27945852279663086,
+          0.46581774950027466,
+          0.25472375750541687
+        ]
+      },
+      {
+        "id": "en/test/3285",
+        "premise": "Hezbollah officials in Beirut and Iran were expecting the arrival of a group during the same time period.",
+        "hypothesis": "An anonymous tipster had tipped Hezbollah officials off about the group's arrival.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.27494609355926514,
+          0.43662914633750916,
+          0.2884247601032257
+        ]
+      },
+      {
+        "id": "en/test/480",
+        "premise": "And unfortunately we moved again.",
+        "hypothesis": "We moved another time.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.26405128836631775,
+          0.49189209938049316,
+          0.24405664205551147
+        ]
+      },
+      {
+        "id": "en/test/1348",
+        "premise": "The arabesques and curlicues of the moldings and architectural ornaments in a French salon mirrored the flouncing ribbons that adorned the women's dresses and the frills of the men's shirts.",
+        "hypothesis": "The women's dresses had ribbons.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.3143089711666107,
+          0.41131776571273804,
+          0.27437326312065125
+        ]
+      },
+      {
+        "id": "en/test/3104",
+        "premise": "Others related only to carrying specific passengers.",
+        "hypothesis": "These regulations involved enhanced security screenings.",
+        "label": "neutral",
+        "language": "en",
+        "gold": "2",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.31346020102500916,
+          0.450335294008255,
+          0.23620454967021942
+        ]
+      },
+      {
+        "id": "en/test/17",
+        "premise": "So I'm not really sure why.",
+        "hypothesis": "I don't know why that happened.",
+        "label": "entailment",
+        "language": "en",
+        "gold": "0",
+        "prediction": "1",
+        "correct": false,
+        "label_probabilities": [
+          0.24994942545890808,
+          0.49451911449432373,
+          0.2555314898490906
+        ]
+      }
+    ],
+    "majority_baseline": 0.34375
+  }
+}

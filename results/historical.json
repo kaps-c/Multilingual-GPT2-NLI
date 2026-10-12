@@ -1,0 +1,22 @@
+{
+  "source": "PDF pages 32-34, manually transcribed and cross-checked with page images",
+  "status": "historical_not_reproduced",
+  "warning": "Zero-shot uses test; per-language uses subset dev; combined uses full dev. These columns are not a controlled same-split comparison.",
+  "rows": [
+    {"language":"en","fertility":1.11,"zero_shot_test_percent":78.02},
+    {"language":"ar","fertility":4.70,"zero_shot_test_percent":37.09},
+    {"language":"bg","fertility":5.53,"zero_shot_test_percent":36.57},
+    {"language":"de","fertility":2.10,"zero_shot_test_percent":41.52,"per_language_dev_percent":63.86,"combined_dev_percent":61.45},
+    {"language":"el","fertility":6.16,"zero_shot_test_percent":37.86},
+    {"language":"es","fertility":1.83,"zero_shot_test_percent":45.55,"per_language_dev_percent":63.45,"combined_dev_percent":64.58},
+    {"language":"fr","fertility":1.75,"zero_shot_test_percent":40.38,"per_language_dev_percent":65.86,"combined_dev_percent":62.85},
+    {"language":"hi","fertility":5.12,"zero_shot_test_percent":36.71},
+    {"language":"ru","fertility":5.90,"zero_shot_test_percent":37.80},
+    {"language":"sw","fertility":2.08,"zero_shot_test_percent":38.18,"per_language_dev_percent":58.03,"combined_dev_percent":56.47},
+    {"language":"th","fertility":9.48,"zero_shot_test_percent":35.87},
+    {"language":"tr","fertility":2.73,"zero_shot_test_percent":37.94},
+    {"language":"ur","fertility":5.16,"zero_shot_test_percent":36.17},
+    {"language":"vi","fertility":3.62,"zero_shot_test_percent":37.15},
+    {"language":"zh","fertility":3.77,"zero_shot_test_percent":39.32}
+  ]
+}

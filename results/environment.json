@@ -1,0 +1,19 @@
+{
+  "dataset": "facebook/xnli",
+  "dataset_revision": "b8dd5d7af51114dbda02c0e3f6133f332186418e",
+  "sha256": {
+    "artifacts/gpt2/model.safetensors": "248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707",
+    "data/xnli/en/train.jsonl": "3e1ff049a257f4079edd6cb5d2ed357d0a43a85396acf4bd1645f35cb78edfc6",
+    "data/xnli/en/dev.jsonl": "cba5899f6c158b16478b6175d5fd2267b8a1173805111aa1b119394d467810e1",
+    "data/xnli/en/test.jsonl": "0257cfe233999da08fd13d6530d7fc30a04bc17322ca0847ee76dcb4536171dd"
+  },
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.6",
+    "numpy": "2.4.4",
+    "datasets": "4.8.2",
+    "matplotlib": "3.11.2",
+    "pytest": "9.0.3",
+    "ruff": "0.17.0"
+  }
+}
