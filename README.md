@@ -12,6 +12,17 @@ benchmark claims. Historical PDF results
 are clearly separated. See [the reconstruction log](docs/reconstruction.md) for
 source references, corrections, and unfinished reproduction work.
 
+The notebook has saved outputs in every code cell and 12 figures: training loss,
+confusion counts, fertility, embeddings, centroid distances, checkpoint comparisons,
+calibration, attention, and uncertainty. Figures are regenerated from compact
+committed results through the same plotting code used by the analysis CLI.
+No local checkpoints or datasets are needed to rerun the notebook.
+
+**Current stage:** workflow reconstruction and visual verification are complete.
+Full experimental reproduction is incomplete: full-data runs are pending, and
+the original synthetic tone/style/Mandarin datasets are missing. Fixture checks
+verify execution only; their scores are not presented as research findings.
+
 ## Setup
 
 Use Python 3.11 or later and a project environment. On Windows:

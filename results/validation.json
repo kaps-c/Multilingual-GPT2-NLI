@@ -15,8 +15,13 @@
     "passed": 13
   },
   "notebook": {
-    "executed_cells": 18,
-    "schema_valid": true
+    "notebooks": 1,
+    "executed_cells": 28,
+    "executed_code_cells": 15,
+    "code_cells_with_outputs": 15,
+    "embedded_figures": 12,
+    "schema_valid": true,
+    "cell_errors": 0
   },
   "extended_checks": {
     "analysis": {

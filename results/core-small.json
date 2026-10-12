@@ -1,0 +1,158 @@
+{
+  "runs": [
+    {
+      "job": "combined",
+      "train_count": 160,
+      "epochs": 1,
+      "test_count": 60,
+      "test_accuracy": 0.5,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "de",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.4166666666666667,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "english",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.5833333333333334,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "english-batch8",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.5,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "english-epochs2",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.5833333333333334,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "english-lr1e5",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.16666666666666666,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "es",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.4166666666666667,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "fr",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.5,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "pretrain",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": null,
+      "test_accuracy": null,
+      "status": "reproduced_small_run"
+    },
+    {
+      "job": "sw",
+      "train_count": 32,
+      "epochs": 1,
+      "test_count": 12,
+      "test_accuracy": 0.5,
+      "status": "reproduced_small_run"
+    }
+  ],
+  "pretraining": {
+    "settings": {
+      "command": "pretrain",
+      "model": "artifacts/gpt2",
+      "data": "data/xnli",
+      "text": "pretrain.txt",
+      "languages": [
+        "en"
+      ],
+      "output": "results\\experiments\\small\\pretrain",
+      "checkpoint": "checkpoints\\experiments\\small\\pretrain.pt",
+      "device": "cuda",
+      "epochs": 1,
+      "batch_size": 1,
+      "max_length": 64,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 42,
+      "threads": 4,
+      "train_limit": 32,
+      "dev_limit": 12,
+      "test_limit": 12,
+      "train_fraction": 1.0,
+      "dev_fraction": 1.0,
+      "accumulation_steps": 4,
+      "mixed_precision": true,
+      "tiny": false,
+      "initialization": "random",
+      "python": "3.11.15",
+      "torch": "2.6.0+cu124",
+      "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+      "label_order": [
+        "entailment",
+        "contradiction",
+        "neutral"
+      ],
+      "train_count": 32
+    },
+    "losses": [
+      10.880459785461426,
+      10.87728214263916,
+      10.842083930969238,
+      10.81922721862793,
+      10.81799030303955,
+      10.56577205657959,
+      10.756503105163574,
+      10.740527153015137,
+      10.61596393585205,
+      10.63503360748291,
+      10.663192749023438,
+      10.697389602661133,
+      10.57634449005127,
+      10.504216194152832,
+      10.534520149230957,
+      10.435718536376953,
+      10.469395637512207,
+      10.323227882385254,
+      10.303609848022461,
+      10.311446189880371,
+      10.104907989501953,
+      10.238883972167969,
+      10.489258766174316,
+      10.316437721252441,
+      10.135333061218262,
+      10.308131217956543,
+      10.234518051147461,
+      10.280487060546875,
+      10.068912506103516,
+      9.909515380859375,
+      10.049715042114258,
+      10.247299194335938
+    ],
+    "generation": " the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the"
+  }
+}

@@ -49,13 +49,54 @@ def plot_learning_curve(result):
         color="#2563eb",
         label="25-batch mean",
     )
+    pretraining = result["settings"].get("command") == "pretrain"
     axis.set(
         xlabel="Training batch",
-        ylabel="Next-label cross-entropy",
-        title="English NLI fine-tuning",
+        ylabel="Next-token cross-entropy"
+        if pretraining
+        else "Next-label cross-entropy",
+        title="Toy pretraining" if pretraining else "English NLI fine-tuning",
     )
     axis.legend(frameon=False)
     axis.spines[["top", "right"]].set_visible(False)
+    figure.tight_layout()
+    return figure
+
+
+def plot_confusion(result):
+    """Count every held-out prediction, including invalid generated labels."""
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    counts = np.zeros((3, 4), dtype=int)
+    for row in result["test"]["predictions"]:
+        predicted = (
+            int(row["prediction"])
+            if row["prediction"] in {"0", "1", "2"}
+            else 3
+        )
+        counts[int(row["gold"]), predicted] += 1
+    labels = ["entailment", "contradiction", "neutral"]
+    figure, axis = plt.subplots(figsize=(6, 4))
+    figure.colorbar(axis.imshow(counts, cmap="Blues"), ax=axis)
+    for (row, column), count in np.ndenumerate(counts):
+        axis.text(
+            column,
+            row,
+            str(count),
+            ha="center",
+            va="center",
+            color="white" if count > counts.max() / 2 else "black",
+        )
+    axis.set(
+        xticks=range(4),
+        xticklabels=labels + ["invalid"],
+        yticks=range(3),
+        yticklabels=labels,
+        xlabel="Predicted label",
+        ylabel="Gold label",
+        title="English held-out confusion matrix",
+    )
     figure.tight_layout()
     return figure
 

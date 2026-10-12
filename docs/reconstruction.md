@@ -100,8 +100,9 @@ message. Missing records cannot be reconstructed faithfully from sampled preview
 ## Reproduction policy
 
 Final verification: 13 behavioral tests pass; Ruff lint and 79-column formatting
-checks pass for the package, tests and notebook. All 18 notebook cells execute and
-validate. All ten small training paths and four tone fixture workflows complete.
+checks pass for the package, tests and notebook. All 28 notebook cells validate;
+all 15 code cells execute with saved outputs, including 12 embedded figures.
+All ten small training paths and four tone fixture workflows complete.
 `results/validation.json` records the compact validation inventory.
 
 The final refactor removes 588 lines from obsolete root `config.py` and `utils.py`
@@ -109,6 +110,37 @@ after confirming no remaining callers. Configuration now lives in the package;
 official model downloads use Transformers/Hugging Face. Style and cross-language
 evaluation load only the probe's required encoder. Code comments are lowercase.
 The local glossary is excluded through `.git/info/exclude` and is never staged.
+
+## Visualization and bloat review
+
+The repository has one project notebook. Its initial saved evaluation outputs were
+present, but several existing analyses were not shown. The expanded notebook now
+displays confusion counts, fertility and correlation summaries, language-family
+summaries, embeddings and centroid distances, matched-checkpoint accuracy and
+embedding comparisons, calibration, shallow/deep attention with per-head metrics,
+segment attention mass, uncertainty distributions, errors, and toy pretraining.
+Sentiment failures and missing synthetic-data results remain explicitly labeled.
+
+The implementation does not need another architectural layer. The review removes
+duplicated attention-export code and shares one figure generator between notebook
+display and CLI export. Four duplicate committed PNGs are replaced by compact
+numeric inputs; the notebook retains rendered outputs for viewing on GitHub.
+Committed attention maps contain only displayed head 0, while JSON summaries
+retain metrics for all heads. Full attention tensors remain local artifacts.
+Checkpoint-comparison labels now correctly say reference/compared, since both
+showcase models were fine-tuned. A fresh analysis run reproduces the prior
+evaluation and attention summaries exactly after the refactor.
+
+| Stage | Status |
+| --- | --- |
+| Source inventory and local glossary | complete; glossary uncommitted |
+| Core model, optimizer, data and training reconstruction | implemented and verified |
+| Extended analysis, sentiment and tone workflows | implemented; tone verified with fixtures only |
+| Minimal-code review and executed visual notebook | complete |
+| Full-data experimental reproduction | incomplete; full runs unexecuted and original synthetic data missing |
+
+This is task-level workflow reconstruction, not an exact replay of all 141 PDF
+pages or a claim to have reproduced every original scientific result.
 
 - First milestone: an actual small English XNLI run on the local GPU, then a
   results-only notebook. No invented benchmark scores.

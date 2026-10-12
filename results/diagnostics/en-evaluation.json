@@ -1,0 +1,417 @@
+{
+  "accuracy": 0.75,
+  "coverage": 1.0,
+  "count": 24,
+  "calibration_conditional_on_labels": {
+    "accuracy": 0.75,
+    "ece": 0.15943001583218577,
+    "brier": 0.3682297149958979,
+    "mean_entropy_bits": 1.0396984927073807,
+    "bins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 6,
+        "accuracy": 0.3333333333333333,
+        "confidence": 0.4495161523421605
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 6,
+        "accuracy": 0.8333333333333334,
+        "confidence": 0.5565689901510874
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "count": 2,
+        "accuracy": 1.0,
+        "confidence": 0.6573739051818848
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "count": 1,
+        "accuracy": 1.0,
+        "confidence": 0.7336438894271851
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 5,
+        "accuracy": 0.8,
+        "confidence": 0.8549558758735657
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 4,
+        "accuracy": 1.0,
+        "confidence": 0.9394375681877136
+      }
+    ]
+  },
+  "predictions": [
+    {
+      "id": "en/test/912",
+      "premise": "spend it on the ones who who do have a chance",
+      "hypothesis": "Give it to everyone, regardless of what they will do with it.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.02862345427274704,
+        0.7336438894271851,
+        0.2377326935529709
+      ]
+    },
+    {
+      "id": "en/test/204",
+      "premise": "They just didn't like what it was like being black in those days, and that was, you know, I guess, that, that was probably, you know, in the early 1930s, uh, when they did that.",
+      "hypothesis": "It was hard to be black in the south.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.06978654116392136,
+        0.3576103150844574,
+        0.5726031064987183
+      ]
+    },
+    {
+      "id": "en/test/2253",
+      "premise": "Close to the original action and still providing the most vivid testimony to the Klondike days, the boomtown of Dawson City yielded in 1951 to the transportation and communications center of Whitehorse as territorial capital.",
+      "hypothesis": "Whitehorse used mainly horse carriages for transportation.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.29624903202056885,
+        0.168858140707016,
+        0.5348928570747375
+      ]
+    },
+    {
+      "id": "en/test/2006",
+      "premise": "The museum is not strong on catalogues or labels",
+      "hypothesis": "The strong point of the museum is the catalogues.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "0",
+      "correct": false,
+      "label_probabilities": [
+        0.4357250928878784,
+        0.2791444957256317,
+        0.28513047099113464
+      ]
+    },
+    {
+      "id": "en/test/1828",
+      "premise": "Levasseur?  He smiled a little.",
+      "hypothesis": "He kept his mouth closed as he smiled a bit.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "1",
+      "correct": false,
+      "label_probabilities": [
+        0.046385541558265686,
+        0.8316413760185242,
+        0.12197303026914597
+      ]
+    },
+    {
+      "id": "en/test/1143",
+      "premise": "As the Secret Constitution would again reassert itself in American politics, we would also take the promise of the Fifteenth Amendment seriously.",
+      "hypothesis": "The Fifteenth Amendment was immediately written off and never passed.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.006500619929283857,
+        0.897688090801239,
+        0.09581129997968674
+      ]
+    },
+    {
+      "id": "en/test/839",
+      "premise": "you know it's probably about twenty by i don't know twenty by six something like that and it's amazing what you can you know how many plants you can plant in there",
+      "hypothesis": "The number of plants it can hold depends upon the types of plants you put in.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.45986247062683105,
+        0.06806053221225739,
+        0.47207698225975037
+      ]
+    },
+    {
+      "id": "en/test/4467",
+      "premise": "The basic flow of world history, as I'm not the first to note, is toward interdependence.",
+      "hypothesis": "As I am the last to note, the flow of world history is towards a more solitary existence.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "2",
+      "correct": false,
+      "label_probabilities": [
+        0.11210031807422638,
+        0.40198609232902527,
+        0.48591357469558716
+      ]
+    },
+    {
+      "id": "en/test/712",
+      "premise": "well i don't remember it seemed like it did but it might not i guess i guess",
+      "hypothesis": "I do not recall completely since I drank quite a bit of wine last night.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.04716552793979645,
+        0.13450054824352264,
+        0.8183339834213257
+      ]
+    },
+    {
+      "id": "en/test/4837",
+      "premise": "In other words, what happens is something like the legerdemain of a magician's now-you-see-it-now-you-don't.",
+      "hypothesis": "What happens is a huge surprise for the audience.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.03728645667433739,
+        0.13297082483768463,
+        0.8297427296638489
+      ]
+    },
+    {
+      "id": "en/test/3456",
+      "premise": "Many PAPD officers were on the ground floors of the complex-some assisting in evacuation, others manning the PAPD desk in 5 WTC or assisting at lobby command posts.",
+      "hypothesis": "The PAPD was nowhere to be found at 5 WTC.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.0031503154896199703,
+        0.9597787261009216,
+        0.03707098588347435
+      ]
+    },
+    {
+      "id": "en/test/260",
+      "premise": "It's a little screw which set an injection but the, the breathing pressure tube to the pilot and counter pressure.",
+      "hypothesis": "There are no screws, just buttons.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.008389942348003387,
+        0.949524462223053,
+        0.04208555445075035
+      ]
+    },
+    {
+      "id": "en/test/244",
+      "premise": "The DOT had to buy the property and stuff.",
+      "hypothesis": "The property and equipment was purchased by the DOT.",
+      "label": "entailment",
+      "language": "en",
+      "gold": "0",
+      "prediction": "0",
+      "correct": true,
+      "label_probabilities": [
+        0.9313076138496399,
+        0.024478044360876083,
+        0.04421441629528999
+      ]
+    },
+    {
+      "id": "en/test/767",
+      "premise": "themselves and i like some of their songs but as as i agree as a general rule i i wouldn't choose rap either",
+      "hypothesis": "They had a few number one hits.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.3813314735889435,
+        0.21407897770404816,
+        0.40458953380584717
+      ]
+    },
+    {
+      "id": "en/test/1791",
+      "premise": "As for me,  said Lord Julian, with intent to make Miss Bishop's departure free from all interference on the part of the buccaneers,  I shall remain aboard the Arabella until we reach Port Royal.",
+      "hypothesis": "Lord Julian got off the Arabella as soon as he possibly could, leaving Miss Bishop alone.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "2",
+      "correct": false,
+      "label_probabilities": [
+        0.3219318985939026,
+        0.2288331538438797,
+        0.4492349922657013
+      ]
+    },
+    {
+      "id": "en/test/1905",
+      "premise": "Oh, please.  There was real alarm in her voice.",
+      "hypothesis": "Her voice demonstrated a calm and relaxed demeanor.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.2748139500617981,
+        0.533261775970459,
+        0.19192427396774292
+      ]
+    },
+    {
+      "id": "en/test/4139",
+      "premise": "Samuel Sheinbein will serve a murder sentence in Israel.",
+      "hypothesis": "Samuel Sheinbein will serve life in prison for the murder he committed.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.17791499197483063,
+        0.22349445521831512,
+        0.598590612411499
+      ]
+    },
+    {
+      "id": "en/test/4931",
+      "premise": "As Welsh's book has a list under PRONUNCIATION, I looked there, to no avail.",
+      "hypothesis": "The pronunciation list only included the most basic things.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.026337094604969025,
+        0.32934603095054626,
+        0.6443167924880981
+      ]
+    },
+    {
+      "id": "en/test/217",
+      "premise": "We were watching something on TV.",
+      "hypothesis": "We were looking at the TV.",
+      "label": "entailment",
+      "language": "en",
+      "gold": "0",
+      "prediction": "0",
+      "correct": true,
+      "label_probabilities": [
+        0.8973731994628906,
+        0.04387197270989418,
+        0.05875490978360176
+      ]
+    },
+    {
+      "id": "en/test/4597",
+      "premise": "The association of money names with other weights is  ouguiya (Mauritania) means `ounce.",
+      "hypothesis": "Ouguiya is translated a 'kilogram' and is used only as a unit of weight measurement.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "1",
+      "correct": true,
+      "label_probabilities": [
+        0.052679210901260376,
+        0.5738446116447449,
+        0.37347620725631714
+      ]
+    },
+    {
+      "id": "en/test/1628",
+      "premise": "She realized that perhaps she had, herself, provoked his anger.",
+      "hypothesis": "She thought she may have provoked his anger.",
+      "label": "entailment",
+      "language": "en",
+      "gold": "0",
+      "prediction": "0",
+      "correct": true,
+      "label_probabilities": [
+        0.91713947057724,
+        0.027384251356124878,
+        0.055476199835538864
+      ]
+    },
+    {
+      "id": "en/test/4464",
+      "premise": "That sits in shadow of Apollo's tree.",
+      "hypothesis": "It sits in broad daylight under the sun.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "2",
+      "correct": false,
+      "label_probabilities": [
+        0.054958656430244446,
+        0.4188203811645508,
+        0.526220977306366
+      ]
+    },
+    {
+      "id": "en/test/3436",
+      "premise": "They concluded that none of the passengers was connected to the 9/11 attacks and have since found no evidence to change that conclusion.",
+      "hypothesis": "They are certain that several of the passengers were involved in the attacks.",
+      "label": "contradiction",
+      "language": "en",
+      "gold": "1",
+      "prediction": "2",
+      "correct": false,
+      "label_probabilities": [
+        0.4384799003601074,
+        0.11196329444646835,
+        0.44955673813819885
+      ]
+    },
+    {
+      "id": "en/test/1805",
+      "premise": "But many could not resolve one way or the other until they were satisfied upon several questions, and chiefly upon one which was voiced by Ogle.",
+      "hypothesis": "Ogle mentioned that the people asking the questions did not know what they were talking about.",
+      "label": "neutral",
+      "language": "en",
+      "gold": "2",
+      "prediction": "2",
+      "correct": true,
+      "label_probabilities": [
+        0.15281876921653748,
+        0.17675022780895233,
+        0.6704310178756714
+      ]
+    }
+  ]
+}
