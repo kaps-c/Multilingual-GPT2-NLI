@@ -187,7 +187,6 @@ def train(args):
         "epochs": epochs,
         "losses": losses,
         "selected_epoch": metadata["epoch"],
-        "elapsed_seconds": time.perf_counter() - start,
         "checkpoint": args.checkpoint,
         "status": "reproduced_small_run"
         if args.train_limit or args.tiny
@@ -210,6 +209,7 @@ def train(args):
         result["generation"] = generate_gpt2(
             model, tokenizer, "The", 30, args.device
         )
+    result["elapsed_seconds"] = time.perf_counter() - start
     write_json(output / "results.json", result)
     print(
         json.dumps(

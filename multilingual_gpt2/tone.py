@@ -211,12 +211,12 @@ def main():
             for row in pairs:
                 stream.write(json.dumps(row, ensure_ascii=False) + "\n")
         return
-    if not args.checkpoint:
-        parser.error("--checkpoint is required for model experiments")
     torch.set_num_threads(4)
-    model, _ = load_checkpoint(args.checkpoint, args.device)
     tokenizer = load_tokenizer(args.model)
     if args.task in {"tone", "pragmatic"}:
+        if not args.checkpoint:
+            parser.error("--checkpoint is required for probe training")
+        model, _ = load_checkpoint(args.checkpoint, args.device)
         classifier, report, vectors, dev = probe_experiment(
             records, model, tokenizer, args.task, args.device
         )
