@@ -241,8 +241,8 @@ def compare_embeddings(baseline, fine_tuned, languages, seed=42):
     if baseline.shape != fine_tuned.shape or len(languages) != len(baseline):
         raise ValueError("embedding comparisons require matching example rows")
     combined = np.concatenate((baseline, fine_tuned))
-    groups = [f"zero/{lang}" for lang in languages] + [
-        f"fine/{lang}" for lang in languages
+    groups = [f"reference/{lang}" for lang in languages] + [
+        f"compared/{lang}" for lang in languages
     ]
     result = embedding_summary(combined, groups, seed)
     result["paired_shift_norm"] = np.linalg.norm(

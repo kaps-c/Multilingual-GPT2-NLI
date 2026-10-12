@@ -24,6 +24,32 @@ from .evaluation import evaluate_nli
 from .training import load_checkpoint
 
 
+def save_attention(
+    model, tokenizer, example, prefix, device, save_weights=True
+):
+    """Write shallow/deep summaries with optional full head maps."""
+    for layer in (0, -1):
+        attention = attention_summary(
+            model,
+            example["input_ids"][None].to(device),
+            example["attention_mask"][None].to(device),
+            layer,
+        )
+        weights = np.asarray(attention.pop("weights"))
+        attention.update(
+            prompt_attention_mass(
+                weights, example["input_ids"].tolist(), tokenizer
+            )
+        )
+        if save_weights:
+            np.savez_compressed(
+                f"{prefix}-{layer}.npz",
+                weights=weights,
+                tokens=example["input_ids"].numpy(),
+            )
+        write_json(f"{prefix}-{layer}.json", attention)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--checkpoint", required=True)
@@ -105,28 +131,13 @@ def main():
         )
         embeddings.append(vectors)
         groups.extend([language] * len(vectors))
-        example = dataset[0]
-        for layer in (0, -1):
-            attention = attention_summary(
-                model,
-                example["input_ids"][None].to(args.device),
-                example["attention_mask"][None].to(args.device),
-                layer,
-            )
-            weights = np.asarray(attention.pop("weights"))
-            attention.update(
-                prompt_attention_mass(
-                    weights, example["input_ids"].tolist(), tokenizer
-                )
-            )
-            np.savez_compressed(
-                output / f"{language}-attention-{layer}.npz",
-                weights=weights,
-                tokens=example["input_ids"].numpy(),
-            )
-            write_json(
-                output / f"{language}-attention-{layer}.json", attention
-            )
+        save_attention(
+            model,
+            tokenizer,
+            dataset[0],
+            output / f"{language}-attention",
+            args.device,
+        )
         print(f"analyzed {language}: {evaluation['accuracy']:.3f}", flush=True)
     vectors = np.concatenate(embeddings)
     np.savez_compressed(
@@ -230,24 +241,14 @@ def main():
                     compared, make_loader(dataset, tokenizer, 4), args.device
                 )
             )
-            example = dataset[0]
-            for layer in (0, -1):
-                attention = attention_summary(
-                    compared,
-                    example["input_ids"][None].to(args.device),
-                    example["attention_mask"][None].to(args.device),
-                    layer,
-                )
-                weights = np.asarray(attention.pop("weights"))
-                attention.update(
-                    prompt_attention_mass(
-                        weights, example["input_ids"].tolist(), tokenizer
-                    )
-                )
-                write_json(
-                    output / f"comparison-{index}-{language}-{layer}.json",
-                    attention,
-                )
+            save_attention(
+                compared,
+                tokenizer,
+                dataset[0],
+                output / f"comparison-{index}-{language}",
+                args.device,
+                save_weights=False,
+            )
         write_json(
             output / f"comparison-{index}-embeddings.json",
             compare_embeddings(
