@@ -113,7 +113,9 @@ def train(args):
                         args.seed,
                         args.train_fraction
                         if split == "train"
-                        else args.eval_fraction,
+                        else args.dev_fraction
+                        if split == "dev"
+                        else 1.0,
                     )
                 )
             splits[split] = rows
@@ -245,26 +247,36 @@ def evaluate(args):
 
 
 def download(args):
-    from datasets import load_dataset
+    import pyarrow.parquet as parquet
+    from huggingface_hub import hf_hub_download
 
     for language in args.languages:
-        dataset = load_dataset(
-            "facebook/xnli",
-            language,
-            cache_dir=str(Path(args.output) / ".cache"),
-        )
-        for split, rows in dataset.items():
-            target = "dev" if split == "validation" else split
+        for target in args.splits:
             path = Path(args.output) / language / f"{target}.jsonl"
+            if path.exists():
+                print(f"keeping existing {path}", flush=True)
+                continue
+            split = "validation" if target == "dev" else target
+            source = hf_hub_download(
+                "facebook/xnli",
+                f"{language}/{split}-00000-of-00001.parquet",
+                repo_type="dataset",
+                revision=args.revision,
+                cache_dir=str(Path(args.output) / ".cache"),
+            )
+            rows = parquet.read_table(source).to_pylist()
+            source_labels = ("entailment", "neutral", "contradiction")
             path.parent.mkdir(parents=True, exist_ok=True)
-            with path.open("w", encoding="utf-8") as stream:
+            temporary = path.with_suffix(".tmp")
+            with temporary.open("w", encoding="utf-8") as stream:
                 for index, row in enumerate(rows):
                     row.update(
-                        label=rows.features["label"].int2str(row["label"]),
+                        label=source_labels[row["label"]],
                         id=f"{language}/{target}/{index}",
                         language=language,
                     )
                     stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+            temporary.replace(path)
             print(f"saved {path}: {len(rows)} examples", flush=True)
 
 
@@ -304,7 +316,7 @@ def main():
         command.add_argument("--dev-limit", type=int)
         command.add_argument("--test-limit", type=int)
         command.add_argument("--train-fraction", type=float, default=1.0)
-        command.add_argument("--eval-fraction", type=float, default=1.0)
+        command.add_argument("--dev-fraction", type=float, default=1.0)
         command.add_argument("--accumulation-steps", type=int, default=1)
         command.add_argument("--mixed-precision", action="store_true")
         command.add_argument("--tiny", action="store_true")
@@ -324,6 +336,15 @@ def main():
     command.set_defaults(handler=download)
     command.add_argument("--languages", nargs="+", default=["en"])
     command.add_argument("--output", default="data/xnli")
+    command.add_argument(
+        "--splits",
+        nargs="+",
+        choices=["train", "dev", "test"],
+        default=["train", "dev", "test"],
+    )
+    command.add_argument(
+        "--revision", default="b8dd5d7af51114dbda02c0e3f6133f332186418e"
+    )
     args = parser.parse_args()
     if hasattr(args, "epochs") and args.epochs < 1:
         parser.error("epochs must be positive")

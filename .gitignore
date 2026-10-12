@@ -12,3 +12,6 @@ artifacts/
 .env
 *.pt
 *.pkl
+results/**/progress.json
+results/**/run.log
+results/experiments/
