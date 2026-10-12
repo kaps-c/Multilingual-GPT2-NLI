@@ -1,0 +1,60 @@
+{
+  "core_small_profile": {
+    "pretrain": "completed",
+    "english": "completed",
+    "english-batch8": "completed",
+    "english-epochs2": "completed",
+    "english-lr1e5": "completed",
+    "es": "completed",
+    "fr": "completed",
+    "de": "completed",
+    "sw": "completed",
+    "combined": "completed"
+  },
+  "behavioral_tests": {
+    "passed": 13
+  },
+  "notebook": {
+    "executed_cells": 18,
+    "schema_valid": true
+  },
+  "extended_checks": {
+    "analysis": {
+      "languages": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "sw"
+      ],
+      "test_examples_per_language": 24,
+      "embeddings_per_language": 8,
+      "checkpoint_comparisons": 1
+    },
+    "sentiment": {
+      "languages": 6,
+      "modes": 3,
+      "examples_per_language": 12,
+      "coverage": 0
+    }
+  },
+  "tone_fixture_checks": {
+    "tone": {
+      "completed": true,
+      "count": 7
+    },
+    "pragmatic": {
+      "completed": true,
+      "count": 56
+    },
+    "style": {
+      "completed": true,
+      "count": 4
+    },
+    "translation": {
+      "completed": true,
+      "count": 32
+    }
+  },
+  "note": "Fixture scores are deliberately omitted; they are not research results. Full benchmark runs and original synthetic data remain pending."
+}

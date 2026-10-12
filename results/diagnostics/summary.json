@@ -1,0 +1,223 @@
+{
+  "settings": {
+    "checkpoint": "checkpoints/showcase-8192.pt",
+    "compare_checkpoints": [
+      "checkpoints/showcase.pt"
+    ],
+    "model": "artifacts/gpt2",
+    "data": "data/xnli",
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "sw"
+    ],
+    "limit": 24,
+    "embedding_limit": 8,
+    "output": "artifacts/analysis-small",
+    "device": "cuda",
+    "seed": 42
+  },
+  "checkpoint_metadata": {
+    "settings": {
+      "command": "train",
+      "model": "artifacts/gpt2",
+      "data": "data/xnli",
+      "text": "pretrain.txt",
+      "languages": [
+        "en"
+      ],
+      "output": "results/showcase-8192",
+      "checkpoint": "checkpoints/showcase-8192.pt",
+      "device": "cuda",
+      "epochs": 1,
+      "batch_size": 4,
+      "max_length": 128,
+      "lr": 5e-05,
+      "weight_decay": 0.01,
+      "seed": 42,
+      "threads": 4,
+      "train_limit": 8192,
+      "dev_limit": 512,
+      "test_limit": 512,
+      "train_fraction": 1.0,
+      "eval_fraction": 1.0,
+      "accumulation_steps": 1,
+      "mixed_precision": true,
+      "tiny": false,
+      "initialization": "pretrained",
+      "python": "3.11.15",
+      "torch": "2.6.0+cu124",
+      "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+      "label_order": [
+        "entailment",
+        "contradiction",
+        "neutral"
+      ],
+      "train_count": 8192,
+      "train_ids_sha256": "5a9e6b40cd69a3c0a8658d5d1f52ce7a9691d84ea16dd3f61faf0ab34b598a7f",
+      "dev_count": 512,
+      "dev_ids_sha256": "d7273d1e493961b19212676b2bc918021bb4ae8eb149ae57ca876f2a8ef226bd",
+      "test_count": 512,
+      "test_ids_sha256": "cc9b6b3b616fecfd5363b02447caf9b51d903014c2b4419607547684e2e3a2d2"
+    },
+    "epoch": 1,
+    "selection_score": 0.720703125
+  },
+  "languages": [
+    {
+      "language": "en",
+      "accuracy": 0.75,
+      "coverage": 1.0,
+      "count": 24,
+      "fertility": 1.1050691244239632,
+      "words": 1085,
+      "tokens": 1199,
+      "fertility_count": 24,
+      "fertility_split": "train",
+      "ece": 0.15943001583218577,
+      "brier": 0.3682297149958979,
+      "entropy": 1.0396984927073807
+    },
+    {
+      "language": "es",
+      "accuracy": 0.3333333333333333,
+      "coverage": 1.0,
+      "count": 24,
+      "fertility": 1.8385689354275743,
+      "words": 1146,
+      "tokens": 2107,
+      "fertility_count": 24,
+      "fertility_split": "train",
+      "ece": 0.2388985045254231,
+      "brier": 0.7213636661436181,
+      "entropy": 1.3493292656688052
+    },
+    {
+      "language": "fr",
+      "accuracy": 0.5416666666666666,
+      "coverage": 1.0,
+      "count": 24,
+      "fertility": 1.767684887459807,
+      "words": 1244,
+      "tokens": 2199,
+      "fertility_count": 24,
+      "fertility_split": "train",
+      "ece": 0.20337380468845367,
+      "brier": 0.6303592666013605,
+      "entropy": 1.4376540775036755
+    },
+    {
+      "language": "de",
+      "accuracy": 0.4583333333333333,
+      "coverage": 1.0,
+      "count": 24,
+      "fertility": 2.0936395759717317,
+      "words": 1132,
+      "tokens": 2370,
+      "fertility_count": 24,
+      "fertility_split": "train",
+      "ece": 0.1382285505533218,
+      "brier": 0.6096261010906137,
+      "entropy": 1.4683217057196956
+    },
+    {
+      "language": "sw",
+      "accuracy": 0.25,
+      "coverage": 1.0,
+      "count": 24,
+      "fertility": 2.0883248730964468,
+      "words": 985,
+      "tokens": 2057,
+      "fertility_count": 24,
+      "fertility_split": "train",
+      "ece": 0.35961159318685526,
+      "brier": 0.8927922933162126,
+      "entropy": 1.34806020070598
+    }
+  ],
+  "note": "fertility uses whitespace word counts; calibration is conditional on NLI labels",
+  "fertility_accuracy": {
+    "count": 5,
+    "pearson": -0.8590424190021027,
+    "pearson_p": 0.06216759185421988,
+    "spearman": -0.7,
+    "spearman_p": 0.1881204043741873
+  },
+  "fertility_entropy": {
+    "count": 5,
+    "pearson": 0.8905449931552929,
+    "pearson_p": 0.042748941299369,
+    "spearman": 0.6,
+    "spearman_p": 0.28475697986529386
+  },
+  "accuracy_ranking": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "sw"
+  ],
+  "families": {
+    "Indo-European": {
+      "languages": [
+        "en",
+        "es",
+        "fr",
+        "de"
+      ],
+      "mean_accuracy": 0.5208333333333334
+    },
+    "Niger-Congo": {
+      "languages": [
+        "sw"
+      ],
+      "mean_accuracy": 0.25
+    }
+  },
+  "comparisons": [
+    {
+      "checkpoint": "checkpoints/showcase.pt",
+      "languages": [
+        {
+          "language": "en",
+          "accuracy": 0.4583333333333333,
+          "delta_accuracy": -0.2916666666666667,
+          "fertility": 1.1050691244239632
+        },
+        {
+          "language": "es",
+          "accuracy": 0.4583333333333333,
+          "delta_accuracy": 0.125,
+          "fertility": 1.8385689354275743
+        },
+        {
+          "language": "fr",
+          "accuracy": 0.4583333333333333,
+          "delta_accuracy": -0.08333333333333331,
+          "fertility": 1.767684887459807
+        },
+        {
+          "language": "de",
+          "accuracy": 0.4583333333333333,
+          "delta_accuracy": 0.0,
+          "fertility": 2.0936395759717317
+        },
+        {
+          "language": "sw",
+          "accuracy": 0.4583333333333333,
+          "delta_accuracy": 0.20833333333333331,
+          "fertility": 2.0883248730964468
+        }
+      ],
+      "fertility_gain": {
+        "count": 5,
+        "pearson": 0.8590424190021025,
+        "pearson_p": 0.06216759185422002,
+        "spearman": 0.7,
+        "spearman_p": 0.1881204043741873
+      }
+    }
+  ]
+}
