@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multilingual-gpt2-nli"
+version = "0.1.0"
+description = "Custom GPT-2 multilingual inference experiments"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.6,<3",
+  "transformers>=4.57,<5",
+  "numpy>=1.26,<3",
+]
+
+[project.optional-dependencies]
+data = ["datasets>=3,<5"]
+report = ["matplotlib>=3.9", "pandas>=2.2", "nbformat>=5.10", "nbclient>=0.10", "ipykernel>=6"]
+analysis = ["scikit-learn>=1.5", "scipy>=1.13"]
+synthetic = ["anthropic>=0.75"]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[tool.setuptools.packages.find]
+include = ["multilingual_gpt2*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires downloaded model or dataset"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["E402"]
