@@ -107,7 +107,11 @@ class GPT2Model(nn.Module):
         self.pos_embedding = nn.Embedding(
             config.max_position_embeddings, config.hidden_size
         )
-        self.embed_dropout = nn.Dropout(config.hidden_dropout_prob)
+        self.embed_dropout = nn.Dropout(
+            config.hidden_dropout_prob
+            if config.embedding_dropout_prob is None
+            else config.embedding_dropout_prob
+        )
         self.gpt_layers = nn.ModuleList(
             GPT2Layer(config) for _ in range(config.num_hidden_layers)
         )
@@ -187,13 +191,13 @@ class GPT2Model(nn.Module):
                 intermediate_size=source.n_inner or source.n_embd * 4,
                 max_position_embeddings=source.n_positions,
                 hidden_dropout_prob=source.resid_pdrop,
+                embedding_dropout_prob=source.embd_pdrop,
                 attention_probs_dropout_prob=source.attn_pdrop,
                 layer_norm_eps=source.layer_norm_epsilon,
                 initializer_range=source.initializer_range,
                 hidden_act=source.activation_function,
             )
         )
-        model.embed_dropout.p = source.embd_pdrop
         with torch.no_grad():
             model.word_embedding.weight.copy_(reference.wte.weight)
             model.pos_embedding.weight.copy_(reference.wpe.weight)

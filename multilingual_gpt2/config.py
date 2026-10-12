@@ -12,6 +12,7 @@ class GPT2Config:
     intermediate_size: int = 3072
     max_position_embeddings: int = 1024
     hidden_dropout_prob: float = 0.1
+    embedding_dropout_prob: float | None = None
     attention_probs_dropout_prob: float = 0.1
     layer_norm_eps: float = 1e-5
     initializer_range: float = 0.02
