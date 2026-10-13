@@ -109,7 +109,8 @@ The final refactor removes 588 lines from obsolete root `config.py` and `utils.p
 after confirming no remaining callers. Configuration now lives in the package;
 official model downloads use Transformers/Hugging Face. Style and cross-language
 evaluation load only the probe's required encoder. Code comments are lowercase.
-The local glossary is excluded through `.git/info/exclude` and is never staged.
+The glossary was initially local-only. It is now tracked in
+`UBIQUITOUS_LANGUAGE.md` at the user's subsequent request.
 
 ## Visualization and bloat review
 
@@ -133,7 +134,7 @@ evaluation and attention summaries exactly after the refactor.
 
 | Stage | Status |
 | --- | --- |
-| Source inventory and local glossary | complete; glossary uncommitted |
+| Source inventory and shared glossary | complete; glossary tracked |
 | Core model, optimizer, data and training reconstruction | implemented and verified |
 | Extended analysis, sentiment and tone workflows | implemented; tone verified with fixtures only |
 | Minimal-code review and executed visual notebook | complete |
@@ -141,6 +142,38 @@ evaluation and attention summaries exactly after the refactor.
 
 This is task-level workflow reconstruction, not an exact replay of all 141 PDF
 pages or a claim to have reproduced every original scientific result.
+
+## Remaining stages
+
+The major task families have implementations. Small runs demonstrate that the
+paths execute, but do not establish complete experimental or numerical parity.
+The remaining work is explicitly incomplete:
+
+1. **Full core experiments.** Run source-sized toy pretraining, English training
+   and its three variants, four independent target-language runs, and combined
+   training. Start with English using `experiments --profile full --only english`.
+   Verify saved settings and checkpoint reloads before expanding to the full suite.
+   This needs compute time; the required five-language training data is available.
+2. **Full evaluation and analysis.** Evaluate the trained English model across all
+   15 XNLI languages and compare target-language/combined models on matching held-out
+   examples. Expand sentiment beyond 12 examples per language and representation
+   analysis beyond eight examples per language. Use training splits for fertility
+   consistently. Replace showcase-only diagnostics with separately labeled full-run
+   tables and figures, retaining the earlier subset evidence.
+3. **Original synthetic-data experiments.** Obtain the 352 core tone messages,
+   80 style situations and 80 Mandarin translations. Derive the pragmatic pairs,
+   then run tone prompting, probes, style generation and cross-language evaluation
+   on real source data. This stage is blocked by missing original files. Generating
+   replacements would be a new experiment, not faithful data reconstruction.
+4. **Interpretation and source-parity review.** Annotate exported errors, assess
+   style meaning preservation separately from probe agreement, compare each final
+   result with its PDF section, and document differences due to corrected bugs,
+   condensed prompts, split choices and unavailable source artifacts. Refresh and
+   execute the notebook with the resulting evidence before claiming full completion.
+
+No full-data jobs or paid generation calls are currently running. The next
+unblocked stage is full English training; synthetic-data work can proceed only
+when the original files are recovered or a replacement-data experiment is chosen.
 
 - First milestone: an actual small English XNLI run on the local GPU, then a
   results-only notebook. No invented benchmark scores.
@@ -150,4 +183,4 @@ pages or a claim to have reproduced every original scientific result.
 - Original synthetic datasets are required to reproduce the tone experiments.
   Newly generated data is a new experiment, not the original reproduction.
 - External paid API calls require credentials and an agreed budget.
-- The local terminology glossary is deliberately excluded from version control.
+- The shared terminology glossary is versioned alongside the implementation.

@@ -11,6 +11,7 @@ majority baseline; both remain visible. These are subset runs, not full-data
 benchmark claims. Historical PDF results
 are clearly separated. See [the reconstruction log](docs/reconstruction.md) for
 source references, corrections, and unfinished reproduction work.
+Project terminology is defined in the [glossary](UBIQUITOUS_LANGUAGE.md).
 
 The notebook has saved outputs in every code cell and 12 figures: training loss,
 confusion counts, fertility, embeddings, centroid distances, checkpoint comparisons,
